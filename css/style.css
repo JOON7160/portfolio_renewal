@@ -1,0 +1,109 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+li {
+  list-style: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+.layout {
+  padding: 3rem 5rem;
+}
+@media screen and (max-width: 1024px) {
+  .layout {
+    padding: 1rem;
+  }
+}
+
+/* pretendard */
+/* Onset */
+main {
+  width: 100%;
+  height: 10vh;
+  background: gray;
+}
+
+.about {
+  width: 100%;
+  height: auto;
+}
+
+.about-wrap {
+  display: flex;
+  gap: 2.5rem;
+  width: 100%;
+  height: auto;
+  border: 1px solid #000;
+}
+@media screen and (max-width: 1024px) {
+  .about-wrap {
+    flex-flow: column-reverse;
+  }
+}
+.about-wrap .first-box {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 2.5rem;
+  border: 1px solid red;
+}
+.about-wrap .first-box-top {
+  border: 1px solid red;
+  width: 100%;
+  height: 30vh;
+}
+@media screen and (max-width: 1024px) {
+  .about-wrap .first-box-top {
+    display: none;
+  }
+}
+.about-wrap .first-box-btm {
+  border: 1px solid red;
+  width: 100%;
+  height: 70vh;
+}
+.about-wrap .second-box {
+  display: flex;
+  flex: 2;
+  flex-wrap: wrap;
+  border: 1px solid gold;
+}
+.about-wrap .second-box-top01 {
+  border: 1px solid gold;
+  width: calc(70% - 25px);
+  height: calc(50vh - 15px);
+  margin-right: 25px;
+  margin-bottom: 15px;
+}
+.about-wrap .second-box-top02 {
+  width: 30%;
+  height: calc(50vh - 15px);
+  border: 1px solid gold;
+  margin-bottom: 15px;
+}
+.about-wrap .second-box-btm {
+  width: 100%;
+  height: 50vh;
+  margin-top: 10px;
+  border: 1px solid gold;
+}
+@media screen and (max-width: 1024px) {
+  .about-wrap .second-box-btm {
+    display: none;
+  }
+}
+.about-wrap .third-box {
+  flex: 1;
+  border: 1px solid blue;
+}
+.about-wrap .third-box-cont {
+  width: 100%;
+  height: 50vh;
+}

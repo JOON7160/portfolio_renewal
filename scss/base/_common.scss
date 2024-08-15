@@ -1,0 +1,10 @@
+html {
+    font-size: 10px;
+}
+.layout {
+    padding: 3rem 5rem;
+    @include mobile () {
+        padding: 1rem;
+    }
+}
+
