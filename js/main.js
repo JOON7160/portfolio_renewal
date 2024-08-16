@@ -11,3 +11,17 @@ function getTime () {
 }
 getTime();
 setInterval(getTime(),1000)
+
+//tab
+let tab = document.querySelectorAll('.circle');
+let tabContent = document.querySelectorAll('.contentItem');
+for (let i = 0; i < tab.length; i++) {
+    tab[i].addEventListener('click',function(){
+        for (let s = 0; s < tab.length ; s++) {
+            tab[s].classList.remove('active')
+            tabContent[s].classList.remove('active');
+        }
+        tab[i].classList.add('active')
+        tabContent[i].classList.add('active')
+    })
+}

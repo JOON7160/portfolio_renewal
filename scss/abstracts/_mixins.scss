@@ -8,6 +8,7 @@
     align-items: center;
 }
 @mixin poCenter {
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -47,4 +48,28 @@
     background-position: $bp;
     background-repeat: no-repeat;
     background-size: $bz;
+}
+@mixin bar {
+    content: "";
+    @include position (
+        $p : absolute,
+        $t : 20px,
+        $l : 50%,
+    );
+    @include background (
+        $bi : $mainImage + 'ui_bar.png',
+        $bp : center,
+    );
+    transform: translateX(-50%);
+    width: 50px;
+    height: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+};
+@mixin glassEffect {
+    background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
 }

@@ -35,6 +35,10 @@ html {
   font-weight: 500;
 }
 
+.semiTitle {
+  font-size: 3rem;
+}
+
 .txt-box {
   font-size: 3rem;
 }
@@ -69,9 +73,287 @@ main {
   }
 }
 .first-box-btm {
-  border: 1px solid red;
+  position: relative;
+  overflow: hidden;
   width: 100%;
   height: 70vh;
+}
+.first-box-btm::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  background-image: url("../../imgs/main/ui_bar.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.first-box-btm:hover .bgImage {
+  opacity: 0;
+  pointer-events: none;
+}
+.first-box-btm .bgImage {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+  opacity: 0;
+  background-image: url("../../imgs/main/about-img.JPG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1;
+  transition: all 1s;
+}
+.first-box-btm .semiTitle {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+}
+
+.tab {
+  position: relative;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+}
+.tab-list {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 50px;
+}
+.tab-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 70%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.tab-content .contentItem {
+  width: 100%;
+  height: 100%;
+}
+.tab-content .txt-box {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  color: #fff;
+  padding: 20px;
+}
+.tab-content .txt-01 {
+  top: -100%;
+  transition: all 0.5s;
+}
+.tab-content .txt-02 {
+  top: -100%;
+  transition: all 0.5s;
+}
+.tab-content .txt-03 {
+  top: -100%;
+  transition: all 0.5s;
+}
+.tab-content .txt-04 {
+  top: -100%;
+  transition: all 0.5s;
+}
+.tab-content .itemImg-01 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../../imgs/main/think-01.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.tab-content .itemImg-01.active {
+  opacity: 1;
+}
+.tab-content .itemImg-01.active .txt-01 {
+  top: 0;
+  transition: all 0.7s;
+}
+.tab-content .itemImg-01.active .txt-02 {
+  top: 0;
+  transition: all 0.7s;
+}
+.tab-content .itemImg-01.active .txt-03 {
+  top: 0;
+  transition: all 0.7s;
+}
+.tab-content .itemImg-01.active .txt-04 {
+  top: 0;
+  transition: all 0.7s;
+}
+.tab-content .itemImg-02 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../../imgs/main/think-02.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.tab-content .itemImg-02.active {
+  opacity: 1;
+}
+.tab-content .itemImg-02.active .txt-01 {
+  top: 0;
+  transition: all 0.7s;
+}
+.tab-content .itemImg-02.active .txt-02 {
+  top: 0;
+  transition: all 0.7s;
+}
+.tab-content .itemImg-02.active .txt-03 {
+  top: 0;
+  transition: all 0.7s;
+}
+.tab-content .itemImg-02.active .txt-04 {
+  top: 0;
+  transition: all 0.7s;
+}
+.tab-content .itemImg-03 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../../imgs/main/think-03.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.tab-content .itemImg-03.active {
+  opacity: 1;
+}
+.tab-content .itemImg-03.active .txt-01 {
+  top: 0;
+  transition: all 0.7s;
+}
+.tab-content .itemImg-03.active .txt-02 {
+  top: 0;
+  transition: all 0.7s;
+}
+.tab-content .itemImg-03.active .txt-03 {
+  top: 0;
+  transition: all 0.7s;
+}
+.tab-content .itemImg-03.active .txt-04 {
+  top: 0;
+  transition: all 0.7s;
+}
+.tab-content .itemImg-04 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../../imgs/main/think-04.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.tab-content .itemImg-04.active {
+  opacity: 1;
+}
+.tab-content .itemImg-04.active .txt-01 {
+  top: 0;
+  transition: all 0.7s;
+}
+.tab-content .itemImg-04.active .txt-02 {
+  top: 0;
+  transition: all 0.7s;
+}
+.tab-content .itemImg-04.active .txt-03 {
+  top: 0;
+  transition: all 0.7s;
+}
+.tab-content .itemImg-04.active .txt-04 {
+  top: 0;
+  transition: all 0.7s;
+}
+
+.circle {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: all 0.5s;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  background-color: #eee;
+  background-image: url();
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.circle::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  width: 25px;
+  height: 25px;
+  color: #fff;
+}
+.circle.active {
+  outline: 3px solid #9BAEC8;
+  transform: scale(1.1);
+  transition: all;
+}
+
+.circle1::after {
+  background-image: url("../../imgs/main/think1.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.circle2::after {
+  background-image: url("../../imgs/main/think2.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.circle3::after {
+  background-image: url("../../imgs/main/think3.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.circle4::after {
+  background-image: url("../../imgs/main/think4.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .second-box {
@@ -111,6 +393,7 @@ main {
   background-size: cover;
 }
 .second-box-top01 .txt-box {
+  position: absolute;
   position: absolute;
   top: 50%;
   left: 50%;
