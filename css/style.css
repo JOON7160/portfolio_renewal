@@ -113,12 +113,12 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
   transition: all 0.5s ease;
   opacity: 0;
-  background-image: url(../../imgs/main/info_bg-1.jpg);
+  background-image: url("../../imgs/main/info_bg-1.jpg");
   background-position: left center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .about-wrap .second-box-top01 .txt-box {
   position: absolute;
@@ -132,10 +132,28 @@ main {
   transition-delay: 0.2s;
 }
 .about-wrap .second-box-top02 {
+  position: relative;
+  overflow: hidden;
   width: 30%;
   height: calc(50vh - 15px);
-  border: 1px solid gold;
   margin-bottom: 15px;
+}
+.about-wrap .second-box-top02:hover .bgImage {
+  transform: scale(1.2);
+}
+.about-wrap .second-box-top02 .bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+  opacity: 0;
+  background-image: url("../../imgs/main/location.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1;
 }
 .about-wrap .second-box-btm {
   width: 100%;

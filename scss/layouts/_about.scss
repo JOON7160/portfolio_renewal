@@ -50,8 +50,10 @@
             }
             .bgImage {
                 @include bgCover();
-                background-image: url(../../imgs/main/info_bg-1.jpg);
-                background-position: left center;
+                @include background(
+                    $bi : $mainImage + 'info_bg-1.jpg',
+                    $bp : left center 
+                )
             }
             .txt-box {
                 position: absolute;
@@ -71,9 +73,23 @@
             margin-bottom: 15px;
         }
         &-top02 {
+            position: relative;
+            overflow: hidden;
+            &:hover {
+                .bgImage {
+                    transform: scale(1.2)
+                }
+            }
+            .bgImage {
+                @include bgCover;
+                @include background (
+                    $bi : $mainImage +'location.png',
+                    $bp : center
+                );
+                opacity: 1;
+            }
             width: 30%;
             height: calc(50vh - 15px);
-            border: 1px solid gold;
             margin-bottom: 15px;
         }
         &-btm {
