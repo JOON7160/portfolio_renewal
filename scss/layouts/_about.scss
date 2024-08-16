@@ -37,29 +37,34 @@
         flex-wrap: wrap;
         border: 1px solid gold;
         &-top01 {
+            position: relative;
             overflow: hidden;
-            .myinfo {
-                width: 100%;
-                height: 100%;
-                position: relative;
-                opacity: 0;
-                transition: all 0.5s ease;
-                &:hover {
-                    background: url(../../imgs/main/info_bg-1.jpg
-                    ) no-repeat center center /cover;
+            &:hover {
+                .bgImage,
+                .txt-box {
                     opacity: 1;
                 }
-                .txt-box {
-                    position: absolute;
-                    @include poCenter();
-                    white-space: nowrap;
-                    color: $whiteff;
-                }
+            }
+            .title {
+                @include position ($p : absolute, $t : 10px, $l : 10px)
+            }
+            .bgImage {
+                @include bgCover();
+                background-image: url(../../imgs/main/info_bg-1.jpg);
+                background-position: left center;
+            }
+            .txt-box {
+                position: absolute;
+                @include poCenter;
+                white-space: nowrap;
+                color: $whiteff;
+                opacity: 0;
+                transition: all 0.3s;
+                transition-delay: 0.2s;
             }
             @include mobile () {
                 
             }
-            border: 1px solid gold;
             width: calc(70% - 25px);
             height: calc(50vh - 15px);
             margin-right: 25px;

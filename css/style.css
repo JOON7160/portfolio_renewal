@@ -28,14 +28,6 @@ html {
   background-color: #eee;
 }
 
-.txt-wrap {
-  padding: 2rem;
-}
-
-.hover {
-  background: url(../../imgs/main/info_bg.jpg) bottom right/cover;
-}
-
 /* pretendard */
 /* Onset */
 .title {
@@ -99,31 +91,45 @@ main {
   border: 1px solid gold;
 }
 .about-wrap .second-box-top01 {
+  position: relative;
   overflow: hidden;
-  border: 1px solid gold;
   width: calc(70% - 25px);
   height: calc(50vh - 15px);
   margin-right: 25px;
   margin-bottom: 15px;
 }
-.about-wrap .second-box-top01 .myinfo {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  opacity: 0;
-  transition: all 0.5s ease;
-}
-.about-wrap .second-box-top01 .myinfo:hover {
-  background: url(../../imgs/main/info_bg-1.jpg) no-repeat center center/cover;
+.about-wrap .second-box-top01:hover .bgImage,
+.about-wrap .second-box-top01:hover .txt-box {
   opacity: 1;
 }
-.about-wrap .second-box-top01 .myinfo .txt-box {
+.about-wrap .second-box-top01 .title {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.about-wrap .second-box-top01 .bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.5s ease;
+  opacity: 0;
+  background-image: url(../../imgs/main/info_bg-1.jpg);
+  background-position: left center;
+}
+.about-wrap .second-box-top01 .txt-box {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   white-space: nowrap;
   color: #fff;
+  opacity: 0;
+  transition: all 0.3s;
+  transition-delay: 0.2s;
 }
 .about-wrap .second-box-top02 {
   width: 30%;
