@@ -54,7 +54,6 @@ main {
   flex-direction: column;
   flex: 1;
   gap: 2.5rem;
-  border: 1px solid #ff0000;
 }
 .first-box-top {
   display: flex;
