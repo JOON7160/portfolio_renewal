@@ -50,10 +50,16 @@ main {
   flex-direction: column;
   flex: 1;
   gap: 2.5rem;
-  border: 1px solid red;
+  border: 1px solid #ff0000;
 }
 .first-box-top {
-  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../imgs/main/clock_bg.jpg");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   height: 30vh;
 }
@@ -151,87 +157,13 @@ main {
   }
 }
 
-.second-box {
-  display: flex;
-  flex: 2;
-  flex-wrap: wrap;
-  border: 1px solid gold;
+.third-box {
+  flex: 1;
+  border: 1px solid blue;
 }
-.second-box-top01 {
-  position: relative;
-  overflow: hidden;
-  width: calc(70% - 25px);
-  height: calc(50vh - 15px);
-  margin-right: 25px;
-  margin-bottom: 15px;
-}
-.second-box-top01:hover .bgImage,
-.second-box-top01:hover .txt-box {
-  opacity: 1;
-}
-.second-box-top01 .title {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-.second-box-top01 .bgImage {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: all 0.5s ease;
-  opacity: 0;
-  background-image: url("../../imgs/main/info_bg-1.jpg");
-  background-position: left center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.second-box-top01 .txt-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  white-space: nowrap;
-  color: #fff;
-  opacity: 0;
-  transition: all 0.3s;
-  transition-delay: 0.2s;
-}
-.second-box-top02 {
-  position: relative;
-  overflow: hidden;
-  width: 30%;
-  height: calc(50vh - 15px);
-  margin-bottom: 15px;
-}
-.second-box-top02:hover .bgImage {
-  transform: scale(1.2);
-}
-.second-box-top02 .bgImage {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: all 0.5s ease;
-  opacity: 0;
-  background-image: url("../../imgs/main/location.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 1;
-}
-.second-box-btm {
+.third-box-cont {
   width: 100%;
   height: 50vh;
-  margin-top: 10px;
-  border: 1px solid gold;
-}
-@media screen and (max-width: 1024px) {
-  .second-box-btm {
-    display: none;
-  }
 }
 
 .about {
@@ -249,5 +181,37 @@ main {
 @media screen and (max-width: 1024px) {
   .about-wrap {
     flex-flow: column-reverse;
+  }
+}
+
+.clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 70%;
+  height: 50%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.time {
+  font-size: 8rem;
+}
+
+.timeBar {
+  transform: translateY(-9px);
+}
+
+.blink {
+  animation: blink 1.5s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
   }
 }

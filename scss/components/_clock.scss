@@ -1,0 +1,26 @@
+.clock {
+    display: flex;
+    @include flexCenter;
+    gap: 5px;
+    width: 70%;
+    height: 50%;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    color: $whiteff;
+}
+.time {
+    font-size: 8rem;
+}
+.timeBar {
+    transform: translateY(-9px);
+}
+.blink {
+    animation: blink 1.5s step-end infinite;
+}
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
