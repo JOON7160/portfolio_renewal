@@ -1,5 +1,6 @@
 html {
     font-size: 10px;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 .layout {
     padding: 3rem 5rem;
@@ -7,4 +8,15 @@ html {
         padding: 1rem;
     }
 }
+.box {
+    border-radius: 20px;
+    background-color: $grayee;
+}
+.txt-wrap {
+    padding: 2rem;
+}
+.hover {
+    background: url(../../imgs/main/info_bg.jpg) bottom right / cover;
+}
+
 
