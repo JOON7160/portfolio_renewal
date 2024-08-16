@@ -45,6 +45,195 @@ main {
   background: gray;
 }
 
+.first-box {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 2.5rem;
+  border: 1px solid red;
+}
+.first-box-top {
+  border: 1px solid red;
+  width: 100%;
+  height: 30vh;
+}
+@media screen and (max-width: 1024px) {
+  .first-box-top {
+    display: none;
+  }
+}
+.first-box-btm {
+  border: 1px solid red;
+  width: 100%;
+  height: 70vh;
+}
+
+.second-box {
+  display: flex;
+  flex: 2;
+  flex-wrap: wrap;
+  border: 1px solid gold;
+}
+.second-box-top01 {
+  position: relative;
+  overflow: hidden;
+  width: calc(70% - 25px);
+  height: calc(50vh - 15px);
+  margin-right: 25px;
+  margin-bottom: 15px;
+}
+.second-box-top01:hover .bgImage,
+.second-box-top01:hover .txt-box {
+  opacity: 1;
+}
+.second-box-top01 .title {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.second-box-top01 .bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+  opacity: 0;
+  background-image: url("../../imgs/main/info_bg-1.jpg");
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.second-box-top01 .txt-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  color: #fff;
+  opacity: 0;
+  transition: all 0.3s;
+  transition-delay: 0.2s;
+}
+.second-box-top02 {
+  position: relative;
+  overflow: hidden;
+  width: 30%;
+  height: calc(50vh - 15px);
+  margin-bottom: 15px;
+}
+.second-box-top02:hover .bgImage {
+  transform: scale(1.2);
+}
+.second-box-top02 .bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+  opacity: 0;
+  background-image: url("../../imgs/main/location.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1;
+}
+.second-box-btm {
+  width: 100%;
+  height: 50vh;
+  margin-top: 10px;
+  border: 1px solid gold;
+}
+@media screen and (max-width: 1024px) {
+  .second-box-btm {
+    display: none;
+  }
+}
+
+.second-box {
+  display: flex;
+  flex: 2;
+  flex-wrap: wrap;
+  border: 1px solid gold;
+}
+.second-box-top01 {
+  position: relative;
+  overflow: hidden;
+  width: calc(70% - 25px);
+  height: calc(50vh - 15px);
+  margin-right: 25px;
+  margin-bottom: 15px;
+}
+.second-box-top01:hover .bgImage,
+.second-box-top01:hover .txt-box {
+  opacity: 1;
+}
+.second-box-top01 .title {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.second-box-top01 .bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+  opacity: 0;
+  background-image: url("../../imgs/main/info_bg-1.jpg");
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.second-box-top01 .txt-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  color: #fff;
+  opacity: 0;
+  transition: all 0.3s;
+  transition-delay: 0.2s;
+}
+.second-box-top02 {
+  position: relative;
+  overflow: hidden;
+  width: 30%;
+  height: calc(50vh - 15px);
+  margin-bottom: 15px;
+}
+.second-box-top02:hover .bgImage {
+  transform: scale(1.2);
+}
+.second-box-top02 .bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+  opacity: 0;
+  background-image: url("../../imgs/main/location.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1;
+}
+.second-box-btm {
+  width: 100%;
+  height: 50vh;
+  margin-top: 10px;
+  border: 1px solid gold;
+}
+@media screen and (max-width: 1024px) {
+  .second-box-btm {
+    display: none;
+  }
+}
+
 .about {
   width: 100%;
   height: auto;
@@ -61,116 +250,4 @@ main {
   .about-wrap {
     flex-flow: column-reverse;
   }
-}
-.about-wrap .first-box {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  gap: 2.5rem;
-  border: 1px solid red;
-}
-.about-wrap .first-box-top {
-  border: 1px solid red;
-  width: 100%;
-  height: 30vh;
-}
-@media screen and (max-width: 1024px) {
-  .about-wrap .first-box-top {
-    display: none;
-  }
-}
-.about-wrap .first-box-btm {
-  border: 1px solid red;
-  width: 100%;
-  height: 70vh;
-}
-.about-wrap .second-box {
-  display: flex;
-  flex: 2;
-  flex-wrap: wrap;
-  border: 1px solid gold;
-}
-.about-wrap .second-box-top01 {
-  position: relative;
-  overflow: hidden;
-  width: calc(70% - 25px);
-  height: calc(50vh - 15px);
-  margin-right: 25px;
-  margin-bottom: 15px;
-}
-.about-wrap .second-box-top01:hover .bgImage,
-.about-wrap .second-box-top01:hover .txt-box {
-  opacity: 1;
-}
-.about-wrap .second-box-top01 .title {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-.about-wrap .second-box-top01 .bgImage {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: all 0.5s ease;
-  opacity: 0;
-  background-image: url("../../imgs/main/info_bg-1.jpg");
-  background-position: left center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.about-wrap .second-box-top01 .txt-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  white-space: nowrap;
-  color: #fff;
-  opacity: 0;
-  transition: all 0.3s;
-  transition-delay: 0.2s;
-}
-.about-wrap .second-box-top02 {
-  position: relative;
-  overflow: hidden;
-  width: 30%;
-  height: calc(50vh - 15px);
-  margin-bottom: 15px;
-}
-.about-wrap .second-box-top02:hover .bgImage {
-  transform: scale(1.2);
-}
-.about-wrap .second-box-top02 .bgImage {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: all 0.5s ease;
-  opacity: 0;
-  background-image: url("../../imgs/main/location.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 1;
-}
-.about-wrap .second-box-btm {
-  width: 100%;
-  height: 50vh;
-  margin-top: 10px;
-  border: 1px solid gold;
-}
-@media screen and (max-width: 1024px) {
-  .about-wrap .second-box-btm {
-    display: none;
-  }
-}
-.about-wrap .third-box {
-  flex: 1;
-  border: 1px solid blue;
-}
-.about-wrap .third-box-cont {
-  width: 100%;
-  height: 50vh;
 }
