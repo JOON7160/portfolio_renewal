@@ -2,7 +2,6 @@
     display: flex;
     flex: 2;
     flex-wrap: wrap;
-    border: 1px solid gold;
     &-top01 {
         position: relative;
         overflow: hidden;
@@ -85,6 +84,5 @@
         width: 100%;
         height: calc(50vh);
         margin-top: 10px;
-        border: 1px solid gold;
     }
 }

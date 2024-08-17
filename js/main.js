@@ -31,3 +31,10 @@ let video = document.querySelector('video');
 let videoBox = document.querySelector('.videoBox');
 videoBox.addEventListener('mouseenter', () => video.play());
 videoBox.addEventListener('mouseleave', () => video.pause());
+
+//folderTab
+
+let tabBox = document.querySelector('.boxColor1');
+tabBox.addEventListener('mouseenter',function(){
+    tabBox.classList.add('hover1')
+})

@@ -1,8 +1,5 @@
+@import './folderTab';
 .third-box {
     flex: 1;
     border: 1px solid blue;
-    &-cont {
-        width: 100%;
-        height: 50vh;
-    }
 }

@@ -1,0 +1,63 @@
+.folderTab {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .box {
+        transition: all 0.4s ease;
+        width: 100%; 
+        height: 100%;
+        padding: 2rem;
+    }
+}
+.boxColor1 {
+    @include position (
+        $p : absolute,
+        $l : 0,
+        $t : 0%,
+    );
+    @include background (
+        $bc : red,
+    );
+    &.hover1 {
+        ~ .boxColor2 {
+            top: 60%;
+        }
+        ~ .boxColor3 {
+            top: 70%;
+        }
+        ~ .boxColor4 {
+            top: 80%;
+        }
+    }
+}
+.boxColor2 {
+    @include position (
+        $p : absolute,
+        $l : 0,
+        $t : 10%,
+    );
+    @include background (
+        $bc : blue,
+    );
+}
+.boxColor3 {
+    @include position (
+        $p : absolute,
+        $l : 0,
+        $t : 20%,
+    );
+    @include background (
+        $bc : gold,
+    );
+}
+.boxColor4 {
+    @include position (
+        $p : absolute,
+        $l : 0,
+        $t : 30%,
+    );
+    @include background (
+        $bc : green,
+    );
+}
