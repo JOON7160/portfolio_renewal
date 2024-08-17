@@ -24,4 +24,10 @@ for (let i = 0; i < tab.length; i++) {
         tab[i].classList.add('active')
         tabContent[i].classList.add('active')
     })
-}
+};
+
+//videoPlay 
+let video = document.querySelector('video');
+let videoBox = document.querySelector('.videoBox');
+videoBox.addEventListener('mouseenter', () => video.play());
+videoBox.addEventListener('mouseleave', () => video.pause());
