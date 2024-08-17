@@ -459,6 +459,7 @@ main {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  border-radius: 2rem;
   /*hover effect */
 }
 .folderTab .box {
@@ -469,25 +470,48 @@ main {
 }
 .folderTab .box .semiTitle {
   position: absolute;
-  top: 3rem;
+  top: 4%;
   left: 4rem;
 }
 .folderTab .box .txt-box {
   font-size: 2.5rem;
   width: 80%;
+  color: #fff;
+  line-height: 1.5em;
   position: absolute;
-  top: 10%;
+  top: 12rem;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
   transition: all 0.5s;
   pointer-events: none;
 }
-.folderTab:has(.hover1) .txt-box {
+.folderTab:has(.hover1) .txt-01 {
   opacity: 1;
   pointer-events: all;
 }
 .folderTab:has(.hover1) .bgImage-01 {
+  opacity: 1;
+}
+.folderTab:has(.hover2) .txt-02 {
+  opacity: 1;
+  pointer-events: all;
+}
+.folderTab:has(.hover2) .bgImage-02 {
+  opacity: 1;
+}
+.folderTab:has(.hover3) .txt-03 {
+  opacity: 1;
+  pointer-events: all;
+}
+.folderTab:has(.hover3) .bgImage-03 {
+  opacity: 1;
+}
+.folderTab:has(.hover4) .txt-04 {
+  opacity: 1;
+  pointer-events: all;
+}
+.folderTab:has(.hover4) .bgImage-04 {
   opacity: 1;
 }
 .folderTab:has(.hover1) .boxColor2 {
@@ -499,13 +523,6 @@ main {
 .folderTab:has(.hover1) .boxColor4 {
   top: 80%;
 }
-.folderTab:has(.hover2) .txt-box {
-  opacity: 1;
-  pointer-events: all;
-}
-.folderTab:has(.hover2) .bgImage-02 {
-  opacity: 1;
-}
 .folderTab:has(.hover2) .boxColor2 {
   top: 10%;
 }
@@ -514,13 +531,6 @@ main {
 }
 .folderTab:has(.hover2) .boxColor4 {
   top: 85%;
-}
-.folderTab:has(.hover3) .txt-box {
-  opacity: 1;
-  pointer-events: all;
-}
-.folderTab:has(.hover3) .bgImage-03 {
-  opacity: 1;
 }
 .folderTab:has(.hover3) .boxColor2 {
   top: 10%;
@@ -531,12 +541,8 @@ main {
 .folderTab:has(.hover3) .boxColor4 {
   top: 80%;
 }
-.folderTab:has(.hover4) .txt-box {
-  opacity: 1;
-  pointer-events: all;
-}
-.folderTab:has(.hover4) .bgImage-04 {
-  opacity: 1;
+.folderTab:has(.hover3) .title-03 {
+  color: #fff;
 }
 .folderTab:has(.hover4) .boxColor2 {
   top: 10%;
@@ -546,6 +552,9 @@ main {
 }
 .folderTab:has(.hover4) .boxColor4 {
   top: 30%;
+}
+.folderTab:has(.hover4) .title-04 {
+  color: #fff;
 }
 
 .boxColor1 {
@@ -557,7 +566,7 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.boxColor1 .semiTitle {
+.boxColor1 .title-01 {
   color: #fff;
 }
 
@@ -570,7 +579,7 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.boxColor2 .semiTitle {
+.boxColor2 .title-02 {
   color: #fff;
 }
 
@@ -606,9 +615,6 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.bgImage-01.on {
-  opacity: 1;
-}
 
 .bgImage-02 {
   position: absolute;
@@ -621,9 +627,6 @@ main {
   background-image: url("../../imgs/main/skill-02.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-}
-.bgImage-02.on {
-  opacity: 1;
 }
 
 .bgImage-03 {
@@ -638,9 +641,6 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.bgImage-03.on {
-  opacity: 1;
-}
 
 .bgImage-04 {
   position: absolute;
@@ -653,9 +653,6 @@ main {
   background-image: url("../../imgs/main/skill-04.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-}
-.bgImage-04.on {
-  opacity: 1;
 }
 
 .third-box {
