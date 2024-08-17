@@ -7,10 +7,37 @@
         transition: all 0.4s ease;
         width: 100%; 
         height: 100%;
-        padding: 2rem;
+        overflow: hidden;
+        .semiTitle {
+            @include position (
+                $p : absolute,
+                $t : 3rem,
+                $l : 4rem,
+            )
+        }
+        .txt-box {
+            font-size: 2.5rem;
+            width: 80%;
+            @include position (
+                $p : absolute,
+                $t : 10%,
+                $l : 50%,
+            );
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: all 0.5s;
+            pointer-events: none;
+        }
     }
     /*hover effect */
     &:has(.hover1) {
+        .txt-box {
+            opacity: 1;
+            pointer-events: all;
+        }
+        .bgImage-01 {
+            opacity: 1;
+        }
         .boxColor2 {
             top: 60%;
         }
@@ -22,6 +49,13 @@
         }
     }
     &:has(.hover2) {
+        .txt-box {
+            opacity: 1;
+            pointer-events: all;
+        }
+        .bgImage-02 {
+            opacity: 1;
+        }
         .boxColor2 {
             top: 10%;
         }
@@ -33,6 +67,13 @@
         }
     }
     &:has(.hover3) {
+        .txt-box {
+            opacity: 1;
+            pointer-events: all;
+        }
+        .bgImage-03 {
+            opacity: 1;
+        }
         .boxColor2 {
             top: 10%;
         }
@@ -44,6 +85,13 @@
         }
     }
     &:has(.hover4) {
+        .txt-box {
+            opacity: 1;
+            pointer-events: all;
+        }
+        .bgImage-04 {
+            opacity: 1;
+        }
         .boxColor2 {
             top: 10%;
         }
@@ -62,8 +110,11 @@
         $t : 0%,
     );
     @include background (
-        $bc : red,
+        $bc : $black14,
     );
+    .semiTitle {
+        color: $whiteff;
+    }
 }
 .boxColor2 {
     @include position (
@@ -72,8 +123,11 @@
         $t : 15%,
     );
     @include background (
-        $bc : blue,
+        $bc : $gray4b,
     );
+    .semiTitle {
+        color: $whiteff;
+    }
 }
 .boxColor3 {
     @include position (
@@ -82,7 +136,7 @@
         $t : 30%,
     );
     @include background (
-        $bc : gold,
+        $bc : $graybd,
     );
 }
 .boxColor4 {
@@ -92,6 +146,17 @@
         $t : 45%,
     );
     @include background (
-        $bc : green,
+        $bc : $grayee,
     );
+}
+@for $s from 1 through 4 {
+    .bgImage-0#{$s} {
+        @include bgCover;
+        @include background (
+            $bi : $mainImage + 'skill-0' +#{$s} + '.jpg',
+        );
+        &.on {
+            opacity: 1;
+        }
+    }
 }

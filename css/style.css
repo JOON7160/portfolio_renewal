@@ -465,7 +465,30 @@ main {
   transition: all 0.4s ease;
   width: 100%;
   height: 100%;
-  padding: 2rem;
+  overflow: hidden;
+}
+.folderTab .box .semiTitle {
+  position: absolute;
+  top: 3rem;
+  left: 4rem;
+}
+.folderTab .box .txt-box {
+  font-size: 2.5rem;
+  width: 80%;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.5s;
+  pointer-events: none;
+}
+.folderTab:has(.hover1) .txt-box {
+  opacity: 1;
+  pointer-events: all;
+}
+.folderTab:has(.hover1) .bgImage-01 {
+  opacity: 1;
 }
 .folderTab:has(.hover1) .boxColor2 {
   top: 60%;
@@ -476,6 +499,13 @@ main {
 .folderTab:has(.hover1) .boxColor4 {
   top: 80%;
 }
+.folderTab:has(.hover2) .txt-box {
+  opacity: 1;
+  pointer-events: all;
+}
+.folderTab:has(.hover2) .bgImage-02 {
+  opacity: 1;
+}
 .folderTab:has(.hover2) .boxColor2 {
   top: 10%;
 }
@@ -485,6 +515,13 @@ main {
 .folderTab:has(.hover2) .boxColor4 {
   top: 85%;
 }
+.folderTab:has(.hover3) .txt-box {
+  opacity: 1;
+  pointer-events: all;
+}
+.folderTab:has(.hover3) .bgImage-03 {
+  opacity: 1;
+}
 .folderTab:has(.hover3) .boxColor2 {
   top: 10%;
 }
@@ -493,6 +530,13 @@ main {
 }
 .folderTab:has(.hover3) .boxColor4 {
   top: 80%;
+}
+.folderTab:has(.hover4) .txt-box {
+  opacity: 1;
+  pointer-events: all;
+}
+.folderTab:has(.hover4) .bgImage-04 {
+  opacity: 1;
 }
 .folderTab:has(.hover4) .boxColor2 {
   top: 10%;
@@ -508,27 +552,33 @@ main {
   position: absolute;
   top: 0%;
   left: 0;
-  background-color: red;
+  background-color: #141519;
   background-image: url();
   background-repeat: no-repeat;
   background-size: cover;
+}
+.boxColor1 .semiTitle {
+  color: #fff;
 }
 
 .boxColor2 {
   position: absolute;
   top: 15%;
   left: 0;
-  background-color: blue;
+  background-color: #4B4C50;
   background-image: url();
   background-repeat: no-repeat;
   background-size: cover;
+}
+.boxColor2 .semiTitle {
+  color: #fff;
 }
 
 .boxColor3 {
   position: absolute;
   top: 30%;
   left: 0;
-  background-color: gold;
+  background-color: #BDBEC0;
   background-image: url();
   background-repeat: no-repeat;
   background-size: cover;
@@ -538,10 +588,74 @@ main {
   position: absolute;
   top: 45%;
   left: 0;
-  background-color: green;
+  background-color: #eee;
   background-image: url();
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.bgImage-01 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+  opacity: 0;
+  background-image: url("../../imgs/main/skill-01.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bgImage-01.on {
+  opacity: 1;
+}
+
+.bgImage-02 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+  opacity: 0;
+  background-image: url("../../imgs/main/skill-02.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bgImage-02.on {
+  opacity: 1;
+}
+
+.bgImage-03 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+  opacity: 0;
+  background-image: url("../../imgs/main/skill-03.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bgImage-03.on {
+  opacity: 1;
+}
+
+.bgImage-04 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+  opacity: 0;
+  background-image: url("../../imgs/main/skill-04.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bgImage-04.on {
+  opacity: 1;
 }
 
 .third-box {
