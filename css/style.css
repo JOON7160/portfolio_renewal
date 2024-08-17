@@ -459,12 +459,49 @@ main {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  /*hover effect */
 }
 .folderTab .box {
   transition: all 0.4s ease;
   width: 100%;
   height: 100%;
   padding: 2rem;
+}
+.folderTab:has(.hover1) .boxColor2 {
+  top: 60%;
+}
+.folderTab:has(.hover1) .boxColor3 {
+  top: 70%;
+}
+.folderTab:has(.hover1) .boxColor4 {
+  top: 80%;
+}
+.folderTab:has(.hover2) .boxColor2 {
+  top: 10%;
+}
+.folderTab:has(.hover2) .boxColor3 {
+  top: 70%;
+}
+.folderTab:has(.hover2) .boxColor4 {
+  top: 85%;
+}
+.folderTab:has(.hover3) .boxColor2 {
+  top: 10%;
+}
+.folderTab:has(.hover3) .boxColor3 {
+  top: 20%;
+}
+.folderTab:has(.hover3) .boxColor4 {
+  top: 80%;
+}
+.folderTab:has(.hover4) .boxColor2 {
+  top: 10%;
+}
+.folderTab:has(.hover4) .boxColor3 {
+  top: 20%;
+}
+.folderTab:has(.hover4) .boxColor4 {
+  top: 30%;
 }
 
 .boxColor1 {
@@ -476,19 +513,10 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.boxColor1.hover1 ~ .boxColor2 {
-  top: 60%;
-}
-.boxColor1.hover1 ~ .boxColor3 {
-  top: 70%;
-}
-.boxColor1.hover1 ~ .boxColor4 {
-  top: 80%;
-}
 
 .boxColor2 {
   position: absolute;
-  top: 10%;
+  top: 15%;
   left: 0;
   background-color: blue;
   background-image: url();
@@ -498,7 +526,7 @@ main {
 
 .boxColor3 {
   position: absolute;
-  top: 20%;
+  top: 30%;
   left: 0;
   background-color: gold;
   background-image: url();
@@ -508,7 +536,7 @@ main {
 
 .boxColor4 {
   position: absolute;
-  top: 30%;
+  top: 45%;
   left: 0;
   background-color: green;
   background-image: url();

@@ -9,6 +9,51 @@
         height: 100%;
         padding: 2rem;
     }
+    /*hover effect */
+    &:has(.hover1) {
+        .boxColor2 {
+            top: 60%;
+        }
+        .boxColor3 {
+            top: 70%;
+        }
+        .boxColor4 {
+            top: 80%;
+        }
+    }
+    &:has(.hover2) {
+        .boxColor2 {
+            top: 10%;
+        }
+        .boxColor3 {
+            top: 70%;
+        }
+        .boxColor4 {
+            top: 85%;
+        }
+    }
+    &:has(.hover3) {
+        .boxColor2 {
+            top: 10%;
+        }
+        .boxColor3 {
+            top: 20%;
+        }
+        .boxColor4 {
+            top: 80%;
+        }
+    }
+    &:has(.hover4) {
+        .boxColor2 {
+            top: 10%;
+        }
+        .boxColor3 {
+            top: 20%;
+        }
+        .boxColor4 {
+            top: 30%;
+        }
+    }
 }
 .boxColor1 {
     @include position (
@@ -19,23 +64,12 @@
     @include background (
         $bc : red,
     );
-    &.hover1 {
-        ~ .boxColor2 {
-            top: 60%;
-        }
-        ~ .boxColor3 {
-            top: 70%;
-        }
-        ~ .boxColor4 {
-            top: 80%;
-        }
-    }
 }
 .boxColor2 {
     @include position (
         $p : absolute,
         $l : 0,
-        $t : 10%,
+        $t : 15%,
     );
     @include background (
         $bc : blue,
@@ -45,7 +79,7 @@
     @include position (
         $p : absolute,
         $l : 0,
-        $t : 20%,
+        $t : 30%,
     );
     @include background (
         $bc : gold,
@@ -55,7 +89,7 @@
     @include position (
         $p : absolute,
         $l : 0,
-        $t : 30%,
+        $t : 45%,
     );
     @include background (
         $bc : green,

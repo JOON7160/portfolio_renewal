@@ -34,7 +34,7 @@ videoBox.addEventListener('mouseleave', () => video.pause());
 
 //folderTab
 
-let tabBox = document.querySelector('.boxColor1');
+let tabBox = document.querySelector('.boxColor4');
 tabBox.addEventListener('mouseenter',function(){
-    tabBox.classList.add('hover1')
+    tabBox.classList.add('hover4')
 })
