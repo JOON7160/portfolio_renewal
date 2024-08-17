@@ -470,8 +470,23 @@ main {
 }
 .folderTab .box .semiTitle {
   position: absolute;
-  top: 4%;
+  top: 6%;
   left: 4rem;
+}
+.folderTab .box::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  background-image: url("../../imgs/main/ui_bar.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 .folderTab .box .txt-box {
   font-size: 2.5rem;
@@ -657,7 +672,6 @@ main {
 
 .third-box {
   flex: 1;
-  border: 1px solid blue;
 }
 
 .about {
@@ -670,7 +684,6 @@ main {
   gap: 2.5rem;
   width: 100%;
   height: auto;
-  border: 1px solid #000;
 }
 @media screen and (max-width: 1024px) {
   .about-wrap {

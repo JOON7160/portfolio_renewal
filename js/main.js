@@ -33,8 +33,14 @@ videoBox.addEventListener('mouseenter', () => video.play());
 videoBox.addEventListener('mouseleave', () => video.pause());
 
 //folderTab
-
-let tabBox = document.querySelector('.boxColor3');
-tabBox.addEventListener('mouseenter',function(){
-    tabBox.classList.add('hover3')
+let folderTabs = document.querySelectorAll('.folderTab .box');
+folderTabs.forEach(function(folderTab, index){
+    folderTab.addEventListener('mouseenter',function(){
+        folderTab.classList.remove('hover1','hover2','hover3','hover4');
+        let tabIndex = index + 1;
+        folderTab.classList.add(`hover${tabIndex}`)
+    });
+    folderTab.addEventListener('mouseleave',function(){
+        folderTab.classList.remove('hover1','hover2','hover3','hover4');
+    })
 })

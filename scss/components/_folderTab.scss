@@ -12,9 +12,12 @@
         .semiTitle {
             @include position (
                 $p : absolute,
-                $t : 4%,
+                $t : 6%,
                 $l : 4rem,
             )
+        }
+        &::after {
+            @include bar;
         }
         .txt-box {
             font-size: 2.5rem;
