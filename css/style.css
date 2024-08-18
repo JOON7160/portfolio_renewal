@@ -43,10 +43,67 @@ html {
   font-size: 3rem;
 }
 
+.txtTypingEffect {
+  position: relative;
+  flex: 1;
+  border: 1px solid #000;
+  height: 50vh;
+}
+
+.typing-wrap {
+  position: absolute;
+  top: 25%;
+  left: 5%;
+}
+.typing-wrap .fixed-txt {
+  display: flex;
+  max-height: 10rem;
+  font-size: 9rem;
+  font-weight: 500;
+  letter-spacing: -0.6rem;
+  color: #141519;
+}
+.typing-wrap .fixed-txt .capital {
+  font-size: 12rem;
+  transform: translate(3px, -30px);
+}
+.typing-wrap .fixed-txt .blank {
+  display: inline-block;
+  width: 25px;
+}
+.typing-wrap .ani-txt {
+  font-size: 10rem;
+  font-weight: 500;
+}
+.typing-wrap .ani-txt .blink {
+  display: inline-block;
+  width: 5rem;
+  height: 1rem;
+  background-color: #141519;
+}
+.typing-wrap .ani-txt .typing-ani {
+  color: #2B90D9;
+}
+.typing-wrap .ani-txt .typing-ani::after {
+  content: "|";
+  animation: blink 1.5s step-end infinite;
+}
+
+.mainVideo {
+  flex: 1;
+  border: 1px solid #000;
+}
+
 main {
+  margin-top: 5%;
   width: 100%;
-  height: 10vh;
-  background: gray;
+  height: 100vh;
+}
+
+.main-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
 }
 
 .first-box {
