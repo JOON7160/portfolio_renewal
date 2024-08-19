@@ -1,0 +1,151 @@
+.slider-wrap {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.slider {
+    @include position (
+        $p : absolute,
+        $t : 80px,
+        $r : 200px,
+        $b : 80px,
+        $l :80px,
+    );
+    border-radius: 20px;
+}
+.slides {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    @include position (
+        $p : absolute,
+        $t : 50%,
+    );
+    transform: translateY(-50%);
+    border-radius: 20px;
+    transition: all 0.5s;
+    width: 240px;
+    height: 320px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+    &:nth-of-type(1) .slides-content,
+    &:nth-of-type(2) .slides-content {
+        opacity: 1;
+        transform: translateY(0px);
+        transition-delay: 0.5s;
+    }
+    &:nth-of-type(1),
+    &:nth-of-type(2) {
+        @include position (
+            $t : 0,
+            $l : 0,
+        );
+        width: 100%;
+        height: 100%;
+        transform: translateY(0);
+        box-shadow: 0 25px 50px rgba(0,0,0,0);
+    }
+    &:nth-of-type(3) {
+        left:  calc(50% + 240px);
+    }
+    &:nth-of-type(4) {
+        left:  calc(50% + 500px);
+    }
+    &:nth-of-type(5) {
+        left:  calc(50% + 760px);
+    }
+    &:nth-of-type(6) {
+        left:  calc(50% + 1020px);
+        opacity: 0;
+    }
+    //images 
+    @for $i from 1 through 6 {
+        &-0#{$i} {
+            @include background (
+                $bi : $mainImage + 'think-0'+#{$i}+'.jpeg',
+                $bp : center,
+            )
+        }
+    }
+}
+
+.slide-buttons {
+    display: flex;
+    gap: 2rem;
+    transform: translateX(-50%);
+    @include position (
+        $p : absolute,
+        $l : 50%,
+        $b : 15px,
+    );
+    button {
+        display: flex;
+        @include flexCenter;
+        position: relative;
+        width: 50px;
+        height: 50px;
+        background-color: #111;
+        border-radius: 50%;
+        cursor: pointer;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-top: 4px solid $whiteff;
+            border-left: 4px solid $whiteff;
+            transform: rotate(315deg) translate(2px, 2px);
+        }
+        &:active {
+            opacity: 0.5;
+        }
+    }
+    .slideNext::before {
+        transform: rotate(135deg) translate(2px, 2px);
+    }
+    
+}
+.slides-content {
+    position: relative;
+    padding: 4rem;
+    max-width: 600px;
+    transition: 0.25s;
+    transition-delay: 0s;
+    transform: translateY(40px);
+    z-index: 1000;
+    opacity: 0;
+    color: $whiteff;
+    font-size: 3rem;
+}
+
+@media (max-width : 900px) {
+    .slider {
+        position: absolute;
+        inset : 40px 40px 200px 40px;
+        
+    }
+    .slides {
+        width: 100px;
+        height: 100px;
+        top: initial;
+        bottom: -170px;
+        box-shadow:  0 10px 20px rgba(0,0,0,0.25) ;
+        &:nth-of-type(1),
+        &:nth-of-type(2) {
+            top: initial;
+            bottom:  0px;
+        }
+        &:nth-of-type(3) {
+            left: 0;
+
+        }
+        &:nth-of-type(4) {
+            left: 120px;
+        }
+        &:nth-of-type(5) {
+            left: 240px;
+        }
+        &:nth-of-type(6) {
+            left: 360px;
+        }
+    }
+}

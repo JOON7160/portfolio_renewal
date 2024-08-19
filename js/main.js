@@ -82,3 +82,17 @@ folderTabs.forEach(function(folderTab, index){
         folderTab.classList.remove('hover1','hover2','hover3','hover4');
     })
 })
+
+//slider
+let prev = document.querySelector('.slidePrev');
+let next = document.querySelector('.slideNext');
+let slider = document.querySelector('.slider');
+
+next.addEventListener('click',function(){
+    let slides = document.querySelectorAll('.slides');
+    slider.appendChild(slides[0])
+})
+prev.addEventListener('click',function(){
+    let slides = document.querySelectorAll('.slides');
+    slider.prepend(slides[slides.length - 1])
+})
