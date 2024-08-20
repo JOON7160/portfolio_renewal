@@ -3,19 +3,279 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- JQuery CDN  -->
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Swiper CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Featherlight JS & CSS  -->
+    <script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js"></script>
+    <link rel="stylesheet" href="./css/featherlight.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
     <title>JungJoon's Portpolio</title>
 </head>
 <body>
     <div class="wrap">
-        <main>
+        <main class='layout'>
+            <div class="main-wrap">
+                <div class="txtTypingEffect">
+                    <div class="typing-wrap">
+                        <p class="fixed-txt">
+                            <span class='capital'>P</span>
+                            <span>u</span>
+                            <span>b</span>
+                            <span>l</span>
+                            <span>i</span>
+                            <span>s</span>
+                            <span>h</span>
+                            <span>i</span>
+                            <span>n</span>
+                            <span>g</span>
+                            <span class='blank'> </span>
+                            <span>w</span>
+                            <span>i</span>
+                            <span>t</span>
+                            <span>h</span>
+                        </p>
+                        <div class="ani-txt">
+                            <p>
+                                <span class="blink"></span>
+                                <span class='typing-ani'></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mainVideo">
 
+                </div>
+            </div>
         </main>
-        <section class='about'>
-
+        <section class='about layout'>
+            <div class="about-wrap">
+                <div class="first-box">
+                    <div class="first-box-top box">
+                        <div class="clock">
+                            <span class='time hours'></span>
+                            <span class='time blink timeBar'>:</span>
+                            <span class='time minutes'></span>
+                        </div>
+                    </div>
+                    <div class="first-box-btm box">
+                        <div class="bgImage"></div>
+                        <h4 class='semiTitle'>Think</h4>
+                        <div class="tab">
+                            <ul class="tab-list">
+                                <li class='circle circle1 active'></li>
+                                <li class='circle circle2'></li>
+                                <li class='circle circle3'></li>
+                                <li class='circle circle4'></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="contentItem itemImg-01 active">
+                                    <div class="txt-box txt-01 ">
+                                        Lorem ipsum dolor sit amet.
+                                    </div>
+                                </div>
+                                <div class="contentItem itemImg-02 ">
+                                    <div class="txt-box txt-02">
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, labore!
+                                    </div>
+                                </div>
+                                <div class="contentItem itemImg-03 ">
+                                    <div class="txt-box txt-03">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing.
+                                    </div>
+                                </div>
+                                <div class="contentItem itemImg-04">
+                                    <div class="txt-box txt-04">
+                                        Lorem ipsum dolor sit amet.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="second-box">
+                    <div class="second-box-top01 box">
+                        <div class="bgImage"></div>
+                        <h3 class="title">MyInfo</h3>
+                        <p class="txt-box">
+                            #성실 #webpublishing # 개발
+                        </p>
+                    </div>
+                    <div class="second-box-top02 box">
+                        <div class="bgImage"></div>
+                    </div>
+                    <div class="second-box-btm box">
+                        <h3 class='title'>I am</h3>
+                        <div class="videoBox">
+                            <video class='introVideo' src="./imgs/main/iam.mp4" loop poster='./imgs/main/iam.jpg' muted platsinline></video>
+                        </div>
+                    </div>
+                </div>
+                <div class="third-box">
+                    <div class="folderTab ">
+                        <div class="box boxColor1 ">
+                            <div class="bgImage bgImage-01"></div>
+                            <h4 class="semiTitle title-01">HTML </h4>
+                            <div class="txt-box txt-01">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam vero, nostrum impedit reprehenderit voluptatem labore similique excepturi nam fugit error voluptas perspiciatis ut, aspernatur dolor!
+                            </div>
+                        </div>
+                        <div class="box boxColor2 ">
+                            <div class="bgImage-02"></div>
+                            <h4 class="semiTitle title-02">HTML </h4>
+                            <div class="txt-box txt-02">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam vero, nostrum impedit reprehenderit voluptatem labore similique excepturi nam fugit error voluptas perspiciatis ut, aspernatur dolor!
+                            </div>
+                        </div>
+                        <div class="box boxColor3 ">
+                            <div class="bgImage-03"></div>
+                            <h4 class="semiTitle title-03">HTML </h4>
+                            <div class="txt-box txt-03">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam vero, nostrum impedit reprehenderit voluptatem labore similique excepturi nam fugit error voluptas perspiciatis ut, aspernatur dolor!
+                            </div>
+                        </div>
+                        <div class="box boxColor4">
+                            <div class="bgImage-04"></div>
+                            <h4 class="semiTitle title-04">HTML </h4>
+                            <div class="txt-box txt-04">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam vero, nostrum impedit reprehenderit voluptatem labore similique excepturi nam fugit error voluptas perspiciatis ut, aspernatur dolor!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section class='portfolio'>
-
+        <section class='portfolio layout'>
+            <div class="slider-wrap box">
+                <div class="slider">
+                    <div class="slides slides-01">
+                        <div class="slides-content">
+                            <div class="content-desc">
+                                <h3 class='semiTitle'>Novita 클론코딩</h3>
+                                <div class="desc-details">
+                                    <div class="desc-details-01">
+                                        <ul class='list_1st info__list'>
+                                            <li><b>Viewport</b>responsive</li>
+                                            <li>
+                                                <b>Color</b>
+                                                <div class="colors">
+                                                    <span class='color'></span>
+                                                    <span class='color'></span>
+                                                    <span class='color'></span>
+                                                </div>
+                                            </li>
+                                            <li><b>Font_Kr</b>
+                                                Noto Sans KR
+                                            </li>
+                                            <li><b>Font_Eg</b>
+                                                Kumbh Sans
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="desc-details-02">
+                                        <ul class='list_2nd info__list'>
+                                            <li><b>작업기간</b> 약2주</li>
+                                            <li><b>제작방식</b> <p>HTML,CSS(SCSS),JQuery</p></li>
+                                            <li><b>작업참여</b> 100%</li>
+                                            <li><b>참고사항</b> 
+                                                <p>
+                                                    Pure CSS를 사용하려고 노력하였으며, 모든 퍼블리싱 작업을 하드코딩으로 작업함.
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="info-link">
+                                    <a href="./portfolio/novita-clone.html" class='link' data-featherlight="iframe">PC ver</a>
+                                    <a href="./portfolio/novita-mockup.html" class='link' data-featherlight="iframe">Mobile ver</a>
+                                    <a href="./portfolio/novita-clone.html" class='link mo' data-featherlight="iframe" >View</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slides slides-02">
+                        <div class="slides-content">
+                            <div class="content-desc">
+                                <h3 class='semiTitle'>마이데이터</h3>
+                                <div class="desc-details">
+                                    <div class="desc-details-01">
+                                        <ul class='list_1st info__list'>
+                                            <li><b>Viewport</b>responsive</li>
+                                            <li>
+                                                <b>Color</b>
+                                                <div class="colors">
+                                                    <span class='color mydata'></span>
+                                                    <span class='color mydata'></span>
+                                                    <span class='color mydata'></span>
+                                                </div>
+                                                </li>
+                                            <li><b>Font_Kr</b>
+                                                Noto Sans KR
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="desc-details-02">
+                                        <ul class='list_2nd info__list'>
+                                            <li><b>작업기간</b> 약2주</li>
+                                            <li><b>제작방식</b> <p>HTML,CSS(SCSS),JQuery</p></li>
+                                            <li><b>작업참여</b> 100%</li>
+                                            <li><b>참고사항</b> 
+                                                <p>
+                                                    Pure CSS를 사용하려고 노력하였으며, 모든 퍼블리싱 작업을 하드코딩으로 작업함.
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="info__link">
+                                    <a href="./portfolio/mydata_clone.html" class='link' data-featherlight="iframe">PC ver</a>
+                                    <a href="./portfolio/mydata-mockup.html" class='link' data-featherlight="iframe">Mobile ver</a>
+                                    <a href="./portfolio/mydata-mockup.html" class='link mo' data-featherlight="iframe">View</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slides slides-03">
+                        <div class="slides-content">
+                            <div class="content-desc">
+                                <h3 class='semiTitle'>춘천시청 복지포털 리뉴얼 작업</h3>
+                                <div class="desc-details">
+                                    <div class="desc-details-01">
+                                        <ul class='list_1st info__list'>
+                                            <li><b>작업기간</b> 24.06.10 ~ 06.28</li>
+                                            <li><b>작업참여</b> 세부페이지 및 로드맵 퍼블리싱 작업</li>
+                                            <li>
+                                                <b>참고사항</b> 
+                                                <p>
+                                                    세부페이지는 HTML, CSS 수정 작업
+                                                    로드맵 사이트는 디자인 시안따라 100% 직접 퍼블리싱 진행
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="info-link">
+                                    <a href="https://www.chuncheon.go.kr/new-welfare/loadmap/" class='link' data-featherlight="iframe">PC ver</a>
+                                    <a href="./portfolio/portfolio-mockup-03.html" class='link' data-featherlight="iframe">Mobile ver</a>
+                                    <a href="./portfolio/portfolio-mockup-03.html" class='link mo' data-featherlight="iframe" >View</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-buttons">
+                    <button class="slidePrev"></button>
+                    <button class="slideNext"></button>
+                </div>
+            </div>
         </section>
     </div>
 </body>
+<script src='./js/main.js'></script>
 </html>

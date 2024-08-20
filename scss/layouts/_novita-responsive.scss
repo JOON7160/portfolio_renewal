@@ -1,0 +1,831 @@
+//variables
+$font-kr: 'Noto Sans KR', sans-serif;
+$font-eg: 'Kumbh Sans', sans-serif;
+$primary-color : #772480;
+
+@media screen and (min-width:320px) and (max-width:1260px) {
+    body.lnb-open {
+        overflow: hidden;
+    }
+    .inner {
+        width: 100%;
+    }
+    /*floating-menu*/
+    .floating-menu {
+        .chat-menu,
+        .top-btn {
+            transform: scale(0.9);
+        }
+    }
+    .container {
+        overflow: hidden;
+    }
+    /* header */
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        &.active {
+            background: #fff;
+            .mo-util {
+                margin-right: 10px;
+                .cart {
+                    filter: invert(0);
+                    transform: scale(1.2);
+                    margin-right: 5px;
+                }
+                .trigger {
+                    filter: invert(100%);
+                    transform: scale(1.2);
+                }
+            }
+        }
+        .header-inner {
+            padding: 0 10px;
+            max-width: 1260px;
+            min-width: 340px;
+            width: 100%;
+            margin: 0;
+            
+        }
+        .logo {
+            margin-right: 0;
+            a {
+                background: url(../../imgs/sub/novita/mo-logo.png)no-repeat center center;
+                background-size: contain;
+                width: 86px;
+            }
+        }
+        .gnb {
+            display: none;
+        }
+        .lnb {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 1000;
+            &-bg {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background: #10101057;
+                z-index: -1;
+            }
+            &-cont {
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 300px;
+                height: 100vh;
+                padding-right: 10px;
+                overflow-y: auto;
+                background: #fff;
+                transition: 0.5s;
+                .cont-util {
+                    padding: 20px 15px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .util {
+                        &-link {
+                            a {
+                                font-size: 15px;
+                                color: #000;
+                            }
+                            margin-right: 10px;
+                        }
+                        &-btns {
+                            display: flex;
+                            align-items: center;
+                            button {
+                                margin: 0 10px;
+                                cursor: pointer;
+                            }
+                            .home-btn {
+                                background: url(../../imgs/sub/novita/ico-sprites-line.svg)no-repeat -545px -641px;
+                                width: 20px;
+                                height: 20px;
+                            }
+                            .search-btn {
+                                background: url(../../imgs/sub/novita/ico-sprites-line.svg)no-repeat -425px -641px;
+                                width: 20px;
+                                height: 20px;
+                            }
+                            .close-btn {
+                                background: url(../../imgs/sub/novita/ico-sprites.svg)no-repeat -651px -92px;
+                                width: 18px;
+                                height: 18px;;
+                            }
+                        }
+                    }
+        
+                }
+                .cont-items {
+                    padding: 10px 15px;
+                    .quick {
+                        padding: 40px 0 20px 0;
+                        display: flex;
+                        li {
+                            position: relative;
+                            flex: 1;
+                            text-align: center;
+                            height: 50px;
+                            line-height: 50px;
+                            a {
+                                width: 100%;
+                                height: 100%;
+                                display: block;
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    top: 0;
+                                    left: 50%;
+                                    transform: translate(-50%,-50%);
+                                    background-image: url(../../imgs/sub/novita/ico-sprites-line.svg);
+                                    background-repeat: no-repeat;
+                                    width: 24px;
+                                    height: 24px;
+                                }
+                            }
+                            .link {
+                                &-cart {
+                                    &::after {
+                                        background-position: -157px -587px;
+                                    }
+                                }
+                                &-page {
+                                    &::after {
+                                        background-position:  -465px -587px;
+                                    }
+                                }
+                                &-heart {
+                                    &::after {
+                                        background-position:-25px -589px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .sub-nav {
+                        border-top: 1px solid #33333358;
+                        border-bottom: 1px solid #33333358;
+                        padding: 20px 0;
+                        .nav-item {
+                            padding: 10px 0;
+                            .item-title {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                font-size: 18px;
+                                &::after {
+                                    float: right;
+                                    content: "";
+                                    background: url(../../imgs/sub/novita/ico-sprites-line.svg)no-repeat -148px -276px;
+                                    width: 13px;
+                                    height: 13px;
+                                    transform: scale(1.2);
+                                }
+                                .title-link {
+                                    display: block;
+                                    width: 100%;
+                                }
+                            }
+                            &.active {
+                                .item-title {
+                                    &::after {
+                                        float: right;
+                                        content: "";
+                                        background: url(../../imgs/sub/novita/ico-sprites-line.svg)no-repeat -379px -282px;
+                                        width: 13px;
+                                        height: 1px;
+                                    }
+                                    .title-link {
+                                        display: block;
+                                        width: 100%;
+                                        color: $primary-color;
+                                    }
+                                }
+                            }
+                            .depth1 {
+                                display: none;
+                                padding: 3px 20px;
+                                li {
+                                    line-height: 2em;
+                                    padding: 2px 0;
+                                    >a {
+                                        display: block;
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                            .depth2 {
+                                padding: 5px 10px;
+                            }
+                        }
+                    }
+                    .mo-find-link {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 20px 0;
+                        a {
+                            display: block;
+                            width: 100%;
+                            font-size: 17px;
+                            font-weight: 500;
+                            color: $primary-color;
+                        }
+                        &::after {
+                            content: "";
+                            display: block;
+                            background: url('../../imgs/sub/novita/ico-sprites-line.svg')no-repeat -346px -277px;
+                            width: 13px;
+                            height: 10px;
+                            transform: scale(1.5);
+                        }
+                    }
+                    .call {
+                        padding: 20px 0;
+                        li {
+                            display: flex;
+                            justify-content: space-between;
+                            padding: 10px 0;
+                            span {
+                                font-size: 15px;
+                            }
+                            .calling {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 25px;
+                                height: 25px;
+                                border-radius: 50%;
+                                background: #d2d2d2;
+                                button {
+                                    background:url('../../imgs/sub/novita/ico-sprites.svg') no-repeat -189px -536px;
+                                    width: 18px;
+                                    height: 18px;
+                                    transform: scale(0.8);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .util {
+            display: none;
+        }
+        .mo-util {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            .cart {
+                display: inline-block;
+                background: url(../../imgs/sub/novita/ico-sprites-line.svg)no-repeat -157px -587px;
+                width: 24px;
+                height: 24px;
+                filter: invert(100%);
+            }
+            .trigger {
+                position: relative;
+                width: 24px;
+                height: 17px;
+                cursor: pointer;
+                span {
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    height: 2px;
+                    background: #fff;
+                    transition: 0.5s;
+                    &:nth-of-type(1) {
+                        top: 0;
+                    } 
+                    &:nth-of-type(2) {
+                        top: 50%;
+                        width: 80%;
+                    }
+                    &:nth-of-type(3) {
+                        top: 100%;
+                    } 
+                }
+            }
+        }
+        input[id=trigger] {
+            display: none;
+        }
+    }
+    /* main */
+    main {
+        .main-slide {
+            .swiper-wrapper {
+                .swiper-slide {
+                    video {
+                        object-fit: cover;
+                    }
+                    .desc {
+                        h2 {
+                            font-size: 60px;
+                        }
+                    }
+                }
+            }
+            .swiper-control {
+                bottom: 5%;
+                .swiper-arrow {
+                    .swiper-button-control {
+                        button {
+                            .fa-solid {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                    .swiper-button-next,
+                    .swiper-button-prev {
+                        width: 20px;
+                        margin: 0 10px;
+                        &::after {
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* find  */
+    .find {
+        .title {
+            h2 {
+                word-wrap: nowrap;
+                font-size: 25px;
+            }
+
+        }
+    }
+    /* best-seller section */
+    .best-seller {
+        .best-prod-slide {
+            .swiper-control {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 200px;
+                height: 50px;
+                .swiper-arrow {
+                }
+            }
+            .swiper-wrapper {
+                width: 400%;
+                .swiper-slide {
+                    &-active {
+                        .img {
+                            img {
+                                width: 100%;
+                            }
+                        }
+                        .desc {
+                        }
+                    }
+                    .img {
+                        img {
+                            width: 100%;
+                            &:nth-of-type(1) {
+                                display: none;
+                            }
+                            &:nth-of-type(2) {
+                                display: block;
+                            }
+                        }
+                    }
+                    .desc {
+                        .inner {
+                            width: 100%;
+                            height: 100%;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                        .prod-info {
+                            width: 100%;
+                            text-align: center;
+                            strong {
+                                font-size: 30px;
+                            }
+                            hr {
+                                display: none;
+                            }
+                        }
+                        .prod-review {
+                            .price {
+                                font-size: 20px;
+                                font-weight: 500;
+                                color: $primary-color;
+                            }
+                        }
+                        .prod-util {
+                            align-items: center;
+                            position: absolute;
+                            width: 100%;
+                            right: 0;
+                            bottom: 3%;
+                            padding: 0 5px;
+                            .detail-link {
+                                display: inline-block;
+                                width: 120px;
+                                height: 40px;
+                                padding: 5px 10px;
+                                margin-right: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /*event-product section */
+    .event-product {
+        padding-top: 50px;
+        .inner {
+            width: 100%;
+            padding: 0 0 0 10px;
+        }
+        .swiper.event-prod-slide {
+            overflow: hidden;
+            .swiper-control {
+                display: block;
+                .fraction-pagination {
+                    padding: 11px 17px 11px 14px;
+                    width: 120px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+                .swiper-pagination {
+                    .swiper-pagination-total {
+                        color: #e2e2e2;
+                    }
+                }
+                .swiper-pagination-progressbar {
+                    position: relative;
+                    width: 50px;
+                    height: 3px;
+                    background: #e2e2e2;
+                    &-fill {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        transform-origin: left top;
+                        background: $primary-color;
+                    }
+                }
+                
+            }
+            .swiper-wrapper {
+                gap: 0;
+                width: 200%;
+                .swiper-slide {
+                    margin-left: 10px;
+                    .prod {
+                        &-img {
+                            width: 100%;
+                            img {
+                                width: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                        &-price {
+                            display: none;
+                            &-mo {
+                                display: block;
+                                margin-top: 30px;
+                                b {
+                                    font-size: 25px;
+                                    display: block;
+                                }
+                                .price {
+                                    font-size: 25px;
+                                    font-weight: 500;
+                                    color: $primary-color;
+                                }
+                            }
+                        }
+                        &-desc {
+                            top: 12%;
+                            color: #000;
+                        }
+                        &-util {
+                            bottom: 25%;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+    /*event-notice section */
+    .event {
+        &-notice {
+            padding-top: 50px;
+            .title {
+                text-align: center;
+                hr {
+                    display: none;
+                }
+                p {
+                    padding: 30px;
+                    word-break: keep-all;
+                }
+            }
+            .event-bg {
+                display: none;
+            }
+        }
+        &-slide {
+            overflow: visible;
+            .swiper-control {
+                .swiper-button {
+                    &-next,
+                    &-prev {
+                        display: none;
+                    }
+                }
+            }
+            .event-prod-pagination {
+                bottom: -10%;
+                left: 0;
+            }
+        }
+        &-cont {
+            display: flex;
+            flex-direction: column;
+            .caption {
+                display: none;
+            }
+            .cont-L {
+                width: 100%;
+                padding: 0;
+            }
+            .cont-s {
+                width: 100%;
+                .item-wrap {
+                    width: 100%;
+                    
+                }
+                .event-desc {
+                    width: 100%;
+                    .img {
+                        width: 100%;
+                        img {
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    .event-info {
+                        text-align: center;
+                        margin-top: 20px;
+                    }
+                }
+            }
+            &-promo {
+                width: 100%;
+            }
+        }
+    }
+    /* review section */
+    .review {
+        .swiper.review-slide {
+            background: url(../../imgs/sub/novita/bg-review.png)no-repeat top center;
+            overflow: hidden;
+            .swiper-control {
+                display: block;
+            }
+            .swiper-wrapper {
+                display: flex;
+                gap: 0;
+                width: 300%;
+                height: 100%;
+                transition-property: transform;
+                overflow: hidden;
+                .swiper-slide {
+                    padding:100px 20px 0 20px ;
+                    width: 100%;
+                    height: auto;
+                    margin-right: 0;
+                    &-active {
+                        .review-img {
+                            transform: translateY(-5%);
+                        }
+                    }
+                    .review-img {
+                        width: 100%;
+                        height: auto;
+                        transition: 0.8s;
+                        img {
+                            width: 100%;
+                        }
+                        &:hover {
+                            transform: translateY(-10%);
+                        }
+                    }
+                    .review-txt {
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        white-space: wrap;
+                        word-break: kepp-all;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        font-size: 18px;
+                        padding: 0 50px;
+                        margin: 0;
+                        margin-bottom: 20px;
+                        font-weight: 300;
+                    }
+                    .review-link {
+                        a {
+                            display: flex;
+                            justify-content: space-between;
+                            width: 100%;
+                            padding-top: 20px;
+                            border-top: 1px dashed #00000053;
+                            color: #333;
+                            img {
+                                border-radius: 5px;
+                                width: 56px;
+                                height: 56px;
+                            }
+                            .desc {
+                                text-align: center;
+                                strong {
+                                    display: block;
+                                }
+                            }
+                            .go-to-detail {
+                                position: relative;
+                                width: 45px;
+                                height: 45px;
+                                border-radius: 50%;
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%,-50%);
+                                    background: url(../../imgs/sub/novita/ico-sprites.svg) no-repeat -20px -151px;
+                                    width: 13px;
+                                    height: 10px;
+                                }
+                            }
+                        }
+                    }
+    
+                }
+            }
+        }
+    }
+
+    /* service section */
+    .service {
+        .title {
+            text-align: center;
+            margin-bottom: 50px;
+            hr {
+                display: none;
+            }
+            p {
+                margin-top: 20px;
+                padding: 0 10px;
+                word-break: keep-all;
+            }
+            
+        }
+        &-cont {
+            flex-direction: column;
+            gap: 30px;
+            padding: 0;
+            .item {
+                width: 100%;
+                .img {
+                    width: 100%;
+                    border-radius: 0;
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .desc {
+                    padding: 20px;
+                }
+                &:nth-of-type(2) {
+                    margin-top: 30px;
+                    .img.right {
+                        border-radius: 0;
+                    }
+                }
+            }
+        }
+    }
+    /* info section */
+    .info {
+        padding-top: 100px;
+        &-innovation {
+            width: 100%;
+            .inno-link {
+                text-wrap: nowrap;
+                span {
+                }
+            }
+            .innovation_pc {
+                display: none;
+            }
+            .innovation_mo {
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+            .cont {
+                h3 {
+                    font-size: 40px;
+                    text-wrap: nowrap;
+                }
+                p {
+                    text-wrap: nowrap;
+                    font-size: 17px;
+                    line-height: 2em;
+                }
+            }
+        }
+        &-link {
+            margin-top: 50px;
+            .links {
+                flex-direction: column;
+                li {
+                    display: flex;
+                    margin-bottom: 15px;
+                    .links-link {
+                        display: flex;
+                        &::before {
+                            margin-top: 30px;
+                        }
+                        .links-desc {
+                            flex: 1;
+                            margin-left: 20px;
+                            text-align: left;
+                            span {
+                                color: #222;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /*footer */
+    footer {
+        background: #333;
+        .inner {
+            padding: 20px 10px;
+        }
+        .f-logo {
+            margin: 40px 0;
+        }
+        .f-cont {
+            flex-direction: column-reverse;
+            gap: 20px;
+            .f-info {
+                .links {
+                    font-size: 13px;
+                    text-wrap: nowrap;
+                }
+            }
+            .address-info {
+                font-size: 12px;
+                line-height: 2em;
+                word-break: kepp-all;
+                padding-right: 10px;
+            }
+            .f-company {
+                .company-info {
+                    padding-bottom: 40px;
+                    border-bottom: 1px solid #333;
+                }
+                .call {
+                    flex-direction: column;
+                    padding: 30px 0;
+                    border-bottom: 1px solid #333;
+                }
+            }
+        }
+
+    }
+
+}

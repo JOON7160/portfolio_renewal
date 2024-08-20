@@ -1,0 +1,17 @@
+@import './_firstBox';
+@import './_secondBox';
+@import './_thirdBox';
+
+.about {
+    width: 100%;
+    height: auto;
+}
+.about-wrap {
+    display: flex;
+    gap: 2.5rem;
+    width: 100%;
+    height: auto;
+    @include mobile() {
+        flex-flow: column-reverse;
+    }
+}

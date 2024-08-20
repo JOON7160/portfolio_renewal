@@ -1,0 +1,154 @@
+.folderTab {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 2rem;
+    .box {
+        transition: all 0.4s ease;
+        width: 100%; 
+        height: 100%;
+        overflow: hidden;
+        .semiTitle {
+            @include position (
+                $p : absolute,
+                $t : 6%,
+                $l : 4rem,
+            )
+        }
+        &::after {
+            @include bar;
+        }
+        .txt-box {
+            font-size: 2.5rem;
+            width: 80%;
+            color: $whiteff;
+            line-height: 1.5em;
+            @include position (
+                $p : absolute,
+                $t : 12rem,
+                $l : 50%,
+            );
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: all 0.5s;
+            pointer-events: none;
+        }
+    }
+    /*hover effect */
+    @for $j from 1 through 4 {
+        &:has(.hover#{$j}) {
+            .txt-0#{$j} {
+                opacity: 1;
+                pointer-events: all;
+            }
+            .bgImage-0#{$j} {
+                opacity: 1;
+            }
+        };
+    };
+    &:has(.hover1) {
+        .boxColor2 {
+            top: 60%;
+        }
+        .boxColor3 {
+            top: 70%;
+        }
+        .boxColor4 {
+            top: 80%;
+        }
+    }
+    &:has(.hover2) {
+        .boxColor2 {
+            top: 10%;
+        }
+        .boxColor3 {
+            top: 70%;
+        }
+        .boxColor4 {
+            top: 85%;
+        }
+    }
+    &:has(.hover3) {
+        .boxColor2 {
+            top: 10%;
+        }
+        .boxColor3 {
+            top: 20%;
+        }
+        .boxColor4 {
+            top: 80%;
+        }
+        .title-03 {
+            color: $whiteff;
+        }
+    }
+    &:has(.hover4) {
+        .boxColor2 {
+            top: 10%;
+        }
+        .boxColor3 {
+            top: 20%;
+        }
+        .boxColor4 {
+            top: 30%;
+        }
+        .title-04 {
+            color: $whiteff;
+        }
+    }
+}
+.boxColor1 {
+    @include position (
+        $p : absolute,
+        $l : 0,
+        $t : 0%,
+    );
+    @include background (
+        $bc : $black14,
+    );
+    .title-01 {
+        color: $whiteff;
+    }
+}
+.boxColor2 {
+    @include position (
+        $p : absolute,
+        $l : 0,
+        $t : 15%,
+    );
+    @include background (
+        $bc : $gray4b,
+    );
+    .title-02 {
+        color: $whiteff;
+    }
+}
+.boxColor3 {
+    @include position (
+        $p : absolute,
+        $l : 0,
+        $t : 30%,
+    );
+    @include background (
+        $bc : $graybd,
+    );
+}
+.boxColor4 {
+    @include position (
+        $p : absolute,
+        $l : 0,
+        $t : 45%,
+    );
+    @include background (
+        $bc : $grayee,
+    );
+}
+@for $s from 1 through 4 {
+    .bgImage-0#{$s} {
+        @include bgCover;
+        @include background (
+            $bi : $mainImage + 'skill-0' +#{$s} + '.jpg',
+        );
+    }
+}

@@ -1,0 +1,53 @@
+.first-box {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 2.5rem;
+    &-top {
+        display: flex;
+        @include flexCenter;
+        @include background (
+            $bi : $mainImage + 'clock_bg.jpg',
+            $bp : left top,
+        );
+        @include mobile(){
+            display: none;
+        }
+        width: 100%;
+        height: 30vh;
+    }
+    &-btm {
+        position: relative;
+        overflow: hidden;
+        &::after {
+            @include bar;
+        }
+        &:hover {
+            .bgImage {
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
+        .bgImage {
+            z-index: 100;
+            @include bgCover {
+                @include background (
+                    $bi : $mainImage + 'about-img.JPG',
+                );
+                opacity: 1;
+                transition: all 1s;
+            }
+        }
+        .semiTitle {
+            @include position (
+                $p : absolute,
+                $t : 30px,
+                $l : 40px,
+            );
+        }
+        width: 100%;
+        height: 70vh;
+
+    }
+}
+@import '../../scss/components/tab';

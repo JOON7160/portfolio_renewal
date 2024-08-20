@@ -1,0 +1,46 @@
+.txtTypingEffect {
+    position: relative;
+    flex: 1;
+    border: 1px solid #000;
+    height: 50vh;
+}
+.typing-wrap {
+    @include position (
+        $p : absolute,
+        $t : 25%,
+        $l : 5%,
+    );
+    .fixed-txt {
+        display: flex;
+        max-height: 10rem;
+        font-size: 9rem;
+        font-weight: 500;
+        letter-spacing: -0.6rem;
+        color: $black14;
+        .capital {
+            font-size: 12rem;
+            transform: translate(3px,-30px)
+        };
+        .blank {
+            display: inline-block;
+            width: 25px;
+        }
+    }
+    .ani-txt {
+        font-size: 10rem;
+        font-weight: 500;
+        .blink {
+            display: inline-block;
+            width: 5rem;
+            height: 1rem;
+            background-color: $black14;
+        }
+        .typing-ani {
+            color: $blue2b;
+            &::after {
+                content: "|";
+                animation: blink 1.5s step-end infinite;
+            }
+        }
+    }
+}

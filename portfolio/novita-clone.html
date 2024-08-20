@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Jquery CDN  -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- swiper CDN  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- AOS js  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- custom JS & CSS  -->
+    <link rel="stylesheet" href="../css/novita.css">
+    <script src='../js/sub/novita-custom.js' defer></script>
+    <title>노비타</title>
+</head>
+<body>
+    <div class="container">
+        <div class="floating-menu">
+            <div class="chat-menu">
+                <input type="checkbox" id='chat'>
+                <label class="chat" for='chat'>
+                    <span></span>
+                    <span></span>
+                </label>
+                <div class="link">
+                    <span class="call-num">구매문의 <span>1566-9090</span></span>
+                    <span class='writing'><a href="#none">1:1문의 작성하기</a></span>
+                </div>
+            </div>
+            <div class="top-btn"><a href="#"></a></div>
+        </div>
+        <header>
+            <div class="header-inner">
+                <h1 class="logo">
+                    <a href="#none" aria-label='novita a kohler company'></a>
+                </h1>
+                <ul class="gnb">
+                    <li class='prod prod1'>
+                        <a href="#none">NOVITA</a>
+                        <div class="sub">
+                            <ul class="depth">
+                                <li><a href="#none">노비타 이노베이션</a></li>
+                                <li><a href="#none">노비타 광고</a></li>
+                                <li><a href="#none">회사소개</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class='prod prod2'>
+                        <a href="#none">PRODUCT</a>
+                        <div class="sub">
+                            <ul class="depth">
+                                <li><a href="#none">BEST & NEW</a></li>
+                                <li>
+                                    <a href="#none">비데</a>
+                                    <ul class="depth2">
+                                        <li><a href="#none">- 살균비데</a></li>
+                                        <li><a href="#none">- 회전노즐 비데</a></li>
+                                        <li><a href="#none">- 방수 비데</a></li>
+                                        <li><a href="#none">- 실속형 비데</a></li>
+                                        <li><a href="#none">- 살균비데</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#none">생활가전</a>
+                                    <ul class="depth2">
+                                        <li><a href="#none">- 슈매니저</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#none">악세서리</a></li>
+                                <li><a href="#none">내게 맞는 비데 찾기</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class='prod prod3'>
+                        <a href="#none">SERVICE</a>
+                        <div class="sub ">
+                            <ul class="depth">
+                                <li><a href="#none">닥터클린 서비스</a></li>
+                                <li><a href="#none">설치 서비스</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class='prod prod4'>
+                        <a href="#none">EVENT</a>
+                        <div class="sub">
+                            <ul class="depth">
+                                <li><a href="#none">노비타 클럽</a></li>
+                                <li><a href="#none">노비타 LIVE</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class='prod prod5'>
+                        <a href="#none">CUSTOMER CENTER</a>
+                        <div class="sub">
+                            <ul class="depth">
+                                <li><a href="#none">AS신청</a></li>
+                                <li><a href="#none">공지사항</a></li>
+                                <li><a href="#none">FAQ</a></li>
+                                <li><a href="#none">1:1문의</a></li>
+                                <li><a href="#none">제품 등록</a></li>
+                                <li><a href="#none">대리점</a></li>
+                                <li><a href="#none">사용 설명서</a></li>
+                            </ul>
+
+                        </div>
+                    </li>
+                </ul>
+                <ul class="util">
+                    <li><a href="#none">Login</a></li>
+                    <li><a href="#none">Cart <span class='badge'>0</span></a></li>
+                    <li><a href="#none">SEARCH</a></li>
+                </ul>
+                <div class="mo-util">
+                    <div>
+                        <a href="#none" class='cart'></a>
+                    </div>
+                    <label class='trigger'for="trigger" >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
+                <div class="lnb">
+                    <div class="lnb-bg"></div>
+                    <div class="lnb-cont">
+                        <div class="cont-util">
+                            <div class="util-link">
+                                <a href="#none">로그인</a>
+                                <a href="#none">회원가입</a>
+                            </div>
+                            <div class="util-btns">
+                                <button class='home-btn'></button>
+                                <button class='search-btn'></button>
+                                <button class='close-btn'></button>
+                            </div>
+                        </div>
+                        <div class="cont-items">
+                            <ul class="quick">
+                                <li><a href="#none"class='link-cart'>장바구니</a></li>
+                                <li><a href="#none"class='link-page'>My Page</a></li>
+                                <li><a href="#none"class='link-heart'>찜한 상품</a></li>
+                            </ul>
+                            <ul class="sub-nav">
+                                <li class='nav-item'>
+                                    <div class='item-title'>
+                                        <a href="#none" class='title-link'>NOVITA</a>
+                                    </div>
+                                    <ul class='depth1'>
+                                        <li><a href="#none">노비타 이노베이션</a></li>
+                                        <li><a href="#none">노비타 광고</a></li>
+                                        <li><a href="#none">회사 소개</a></li>
+                                    </ul>
+                                </li>
+                                <li class='nav-item'>
+                                    <div class='item-title'>
+                                        <a href="#none" class='title-link'>PRODUCT</a>
+                                    </div>
+                                    <ul class='depth1'>
+                                        <li><a href="#none">BEST & NEW</a></li>
+                                        <li>
+                                            <a href="#none">비데</a>
+                                            <ul class='depth2'>
+                                                <li><a href="#none">- 살균비데</a></li>
+                                                <li><a href="#none">- 회전노즐 비데</a></li>
+                                                <li><a href="#none">- 방수 비데</a></li>
+                                                <li><a href="#none">- 실속형 비데</a></li>
+                                                <li><a href="#none">- 일체형 비데</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#none">생활가전</a>
+                                            <div class='depth2'><a href="#none">- 슈매니저</a></div>
+                                        </li>
+                                        <li><a href="#none">악세서리</a></li>
+                                        <li><a href="#none">내게 맞는 비대 찾기</a></li>
+                                    </ul>
+                                </li>
+                                <li class='nav-item'>
+                                    <div class='item-title'>
+                                        <a href="#none" class='title-link'>SERVICE</a>
+                                    </div>
+                                    <ul class='depth1'>
+                                        <li><a href="#none">닥터클린 서비스 </a></li>
+                                        <li><a href="#none">설치 서비스 </a></li>
+                                    </ul>
+                                </li>
+                                <li class='nav-item'>
+                                    <div class='item-title'>
+                                        <a href="#none" class='title-link'>EVENT</a>
+                                    </div>
+                                    <ul class='depth1'>
+                                        <li><a href="#none">노비타 클럽 </a></li>
+                                        <li><a href="#none">노비타 LIVE</a></li>
+                                        <li><a href="#none">이벤트</a></li>
+                                    </ul>
+                                </li>
+                                <li class='nav-item'>
+                                    <div class='item-title'>
+                                        <a href="#none" class='title-link'>CUSTOMER CENTER</a>
+                                    </div>
+                                    <ul class='depth1'>
+                                        <li><a href="#none">AS신청 </a></li>
+                                        <li><a href="#none">공지사항</a></li>
+                                        <li><a href="#none">FAQ</a></li>
+                                        <li><a href="#none">1:1 문의</a></li>
+                                        <li><a href="#none">제품등록</a></li>
+                                        <li><a href="#none">사용 설명서</a></li>
+                                    </ul>
+                                </li>
+                                
+                            </ul>
+                            <div class="mo-find-link">
+                                <a href="#none">내게 맞는 비데 찾기</a>
+                            </div>
+                            <ul class="call">
+                                <li>
+                                    <span>구매문의</span>
+                                    <div class="calling">
+                                        <button></button>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>고객상담센터</span>
+                                    <div class="calling">
+                                        <button></button>
+                                    </div>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <input type="checkbox" id='trigger'>
+            </div>
+        </header>
+        <main>
+            <div class="main-slide swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <video class='main-bg-video' src="../imgs/sub/novita/video/main-1.mp4" loop autoplay muted playsinline></video>
+                        <div class="desc" >
+                            <h2>Think Better!</h2>
+                            <p>
+                                New 노비타 살균비데 프리미엄<br>
+                                손 댈 필요 없이, 매일 새 비데처럼
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <video src="../imgs/sub/novita/video/main-2.mp4" loop autoplay muted playsinline></video>
+                        <div class="desc" data-aos="fade-up" data-aos-duration="2000">
+                            <h2>Think Better!</h2>
+                            <p>
+                                New 노비타 노즐교체 비데<br>
+                                자동 알림과 손쉬운 교체로 노즐 전체를 바꿔 비데 걱정 끝!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <video src="../imgs/sub/novita/video/main-3.mp4" loop autoplay muted playsinline></video>
+                        <div class="desc" data-aos="fade-up" data-aos-duration="2000">
+                            <h2>Think Better!</h2>
+                            <p>
+                                노비타 비데는 방수가 기본! <br>   
+                                습한 욕실에서도 고장 걱정없이, 안전하게!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <video src="../imgs/sub/novita/video/main-4.mp4" loop autoplay muted playsinline></video>
+                        <div class="desc" data-aos="fade-up" data-aos-duration="2000">
+                            <h2>Think Better!</h2>
+                            <p>
+                                New 노비타 노즐교체 비데 <br>
+                                자동 알림과 손쉬운 교체로 노즐 전체를 바꿔 비데 걱정 끝!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-control">
+                    <div class="pagination-control">
+                        <div class="swiper-pagination"></div>
+                        <div class="autoplay-progress">
+                            <svg viewBox="0 0 100 10">
+                                <line x1="0" y1="0" x2="100" y2="0">
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="swiper-arrow">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-control">
+                            <button class='main-toggle-btn' tabindex='0'>
+                                <i class="fa-solid fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <section class="find">
+            <div class="title" data-aos="fade-up"data-aos-duration="500">
+                <h2>어떤 비데를 사야할지 고민된다면?</h2>
+                <a href="#none" class='find-link'>내게 맞는 노비타 찾기</a>
+            </div>
+            <div class="find-slide">
+                <div class="imgs origin">
+                    <img src="../imgs/sub/novita/find-novita-01.png" alt="노비타비데 이미지">
+                    <img src="../imgs/sub/novita/find-novita-02.png" alt="노비타비데 이미지">
+                    <img src="../imgs/sub/novita/find-novita-03.png" alt="노비타비데 이미지">
+                    <img src="../imgs/sub/novita/find-novita-04.png" alt="노비타비데 이미지">
+                    <img src="../imgs/sub/novita/find-novita-05.png" alt="노비타비데 이미지">
+                    <img src="../imgs/sub/novita/find-novita-06.png" alt="노비타비데 이미지">
+                    <img src="../imgs/sub/novita/find-novita-07.png" alt="노비타비데 이미지">
+                    <img src="../imgs/sub/novita/find-novita-08.png" alt="노비타비데 이미지">
+                    <img src="../imgs/sub/novita/find-novita-09.png" alt="노비타비데 이미지">
+                    <img src="../imgs/sub/novita/find-novita-10.png" alt="노비타비데 이미지">
+                </div>
+                <div class="imgs clone">
+                    <img src="../imgs/sub/novita/find-novita-01.png" alt="노비타비데 이미지">
+                    <img src="../imgs/sub/novita/find-novita-02.png" alt="노비타비데 이미지">
+                    <img src="../imgs/sub/novita/find-novita-03.png" alt="노비타비데 이미지">
+                    <img src="../imgs/sub/novita/find-novita-04.png" alt="노비타비데 이미지">
+                    <img src="../imgs/sub/novita/find-novita-05.png" alt="노비타비데 이미지">
+                    <img src="../imgs/sub/novita/find-novita-06.png" alt="노비타비데 이미지">
+                    <img src="../imgs/sub/novita/find-novita-07.png" alt="노비타비데 이미지">
+                    <img src="../imgs/sub/novita/find-novita-08.png" alt="노비타비데 이미지">
+                    <img src="../imgs/sub/novita/find-novita-09.png" alt="노비타비데 이미지">
+                    <img src="../imgs/sub/novita/find-novita-10.png" alt="노비타비데 이미지">
+                </div>
+            </div>
+        </section>
+        <section class="best-seller">
+            <h2 data-aos="fade-up"data-aos-duration="500">베스트 셀러</h2>
+            <div class="best-prod-slide swiper" data-aos="fade-up"data-aos-duration="500">
+                <div class="swiper-control">
+                    <div class="pagination-control">
+                        <div class="swiper-pagination"></div>
+                        <div class="best-autoplay-progress">
+                            <svg viewBox="0 0 100 10">
+                                <line x1="0" y1="0" x2="100" y2="0">
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="swiper-arrow">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-control">
+                            <button class='best-toggle-btn' tabindex='0'>
+                                <i class="fa-solid fa-play"></i>
+                            </button>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="img">
+                            <img src="../imgs/sub/novita/best-prod1.png" class='img-pc' alt="">
+                            <img src="../imgs/sub/novita/best-prod1-mo.jpeg" class='img-mo' alt="">
+                        </div>
+                        <div class="desc">
+                            <div class="inner">
+                                <div class="prod-info">
+                                    <strong class='prod-name'>
+                                        노즐교체비데
+                                    </strong>
+                                    <b>BD-C510E0</b>
+                                    <hr>
+                                    <p>
+                                        자동 알림과 손쉬운 교체로 노즐 전체를 바꿔 비데 위생 걱정 끝!
+                                    </p>
+                                </div>
+                                <div class="prod-review">
+                                    <p class="reveiw">
+                                        새 노즐로 새 비데처럼,<br> 노비타 노즐교체비데
+                                        새로운 비데 생활의 시작!
+                                    </p>
+                                    <span class="price">
+                                        279,000원
+                                    </span>
+                                    <div class="prod-util">
+                                        <a href="#none" class='detail-link'>자세히 보기 </a>
+                                        <input type="checkbox" id='like1'>
+                                        <label for="like1">
+                                            <span class='ir-wa'>찜하기</span>
+                                        </label>
+                                        <input type="checkbox" id='cart1'>
+                                        <label for="cart1">
+                                            <span class="hidden">장바구니</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img">
+                            <img src="../imgs/sub/novita/best-prod2.png" class='img-pc' alt="">
+                            <img src="../imgs/sub/novita/best-prod2-mo.png" class='img-mo' alt="">
+                        </div>
+                        <div class="desc">
+                            <div class="inner">
+                                <div class="prod-info">
+                                    <strong>
+                                        살균비데 프리미엄(쿠퍼골드)
+                                    </strong>
+                                    <b>BD-H500HC</b>
+                                    <hr>
+                                    <p>
+                                        처음부터 끝까지 알아서 다 해주는 새로운 욕실 생활의 시작
+                                    </p>
+                                </div>
+                                <div class="prod-review">
+                                    <p class="reveiw">
+                                        노비타만 쓰던집이라 고장없이 제품 좋은건 잘알고 있고, 자동 열림이 느긋하게 기다리시면 너무편해요 자동 물내림 되면서 커버도 닫히니 위생상도 너무 좋구요<br>
+                                        qtcind***
+                                    </p>
+                                    <span class="price">
+                                        519,000원
+                                    </span>
+                                    <div class="prod-util">
+                                        <a href="#none" class='detail-link'>자세히 보기 </a>
+                                        <input type="checkbox" id='like2'>
+                                        <label for="like2">
+                                            <span class='ir-wa'>찜하기</span>
+                                        </label>
+                                        <input type="checkbox" id='cart2'>
+                                        <label for="cart2">
+                                            <span class="hidden">장바구니</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img">
+                            <img src="../imgs/sub/novita/best-prod3.jpeg" alt="">
+                            <img src="../imgs/sub/novita/best-prod3-mo.jpeg" class='img-mo' alt="">
+                        </div>
+                        <div class="desc">
+                            <div class="inner">
+                                <div class="prod-info">
+                                    <strong>
+                                        살균비데 리모컨형
+                                    </strong>
+                                    <b>BD-H710H0</b>
+                                    <hr>
+                                    <p>
+                                        노즐 내부, 외부부터 도기까지 따로 신경쓰지 않아도 하루 한 번 자동으로 살균!
+                                    </p>
+                                </div>
+                                <div class="prod-review">
+                                    <p class="reveiw">
+                                        비데 안 쓰다가 써봤는데 너무 만족합니다 제품이 너무 다양해서 살균비데형이 베스트셀러라 구매했습니다 리모컨형이라 더 편하네요 고민만 해다가 구매하기를 참 잘했습니다<br>
+                                        ch0J***
+                                    </p>
+                                    <span class="price">
+                                        399,000원
+                                    </span>
+                                    <div class="prod-util">
+                                        <a href="#none" class='detail-link'>자세히 보기 </a>
+                                        <input type="checkbox" id='like3'>
+                                        <label for="like3">
+                                            <span class='ir-wa'>찜하기</span>
+                                        </label>
+                                        <input type="checkbox" id='cart3'>
+                                        <label for="cart3">
+                                            
+                                            <span class="hidden">장바구니</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="img">
+                            <img src="../imgs/sub/novita/best-prod4.jpeg" alt="">
+                            <img src="../imgs/sub/novita/best-prod4-mo.jpeg" class='img-mo' alt="">
+                        </div>
+                        <div class="desc">
+                            <div class="inner">
+                                <div class="prod-info">
+                                    <strong>
+                                        살균비데 일반형
+                                    </strong>
+                                    <b>BD-H510E0</b>
+                                    <hr>
+                                    <p>
+                                        노즐 내부, 외부부터 도기까지 따로 신경쓰지 않아도 하루 한 번 자동으로 살균!
+                                    </p>
+                                </div>
+                                <div class="prod-review">
+                                    <p class="reveiw">
+                                        살균기능을 원해서 구매했는데 아주 마음에 듭니다. 비데만 바꿨을 뿐인데 화장실이 호텔 화장실이 됐습니다. <br>pacun*****
+                                    </p>
+                                    <span class="price">
+                                        315,000원
+                                    </span>
+                                    <div class="prod-util">
+                                        <a href="#none" class='detail-link'>자세히 보기 </a>
+                                        <input type="checkbox" id='like4'>
+                                        <label for="like4">
+                                            <span class='ir-wa'>찜하기</span>
+                                        </label>
+                                        <input type="checkbox" id='cart4'>
+                                        <label for="cart4">
+                                            <span class="hidden">장바구니</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="event-product">
+            <div class="inner">
+                <h2 data-aos="fade-up" data-aos-duration="500">이달의 행사 제품</h2>
+                <div class="prod-list" data-aos="fade-left" data-aos-duration="500" data-aos-delay="700">
+                    <div class="swiper event-prod-slide">
+                        <ul class="swiper-wrapper">
+                            <li class='swiper-slide'>
+                                <div class="prod-img">
+                                    <img src="../imgs/sub/novita/evnt-prod01.jpg" alt="주황색 타일 배경의 흰색 노비타 비데 이미지/흰지부분이 쿠퍼골드색상의 노비타 비데">
+                                </div>
+                                <div class="prod-desc">
+                                    <div class="prod-name">
+                                        <strong>살균비데 프리미엄(쿠퍼골드)</strong>
+                                        <span aria-label='살균비데 프리미엄(쿠퍼골드) 제품번호'>BD-H500HC</span>
+                                    </div>
+                                    <div class="prod-info">
+                                        <span>처음부터 끝까지 알아서 다 해주는 새로운 욕실 생활의 시작</span>
+                                        <div class="prod-price">
+                                            <b>할인혜택가</b>
+                                            <strong class='price'>519,000</strong>원
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="prod-util">
+                                    <input type="checkbox" id='like5'>
+                                    <label for="like5">
+                                        <span class='ir-wa'>찜하기</span>
+                                    </label>
+                                    <input type="checkbox" id='cart5'>
+                                    <label for="cart5">
+                                        <span class="hidden">장바구니</span>
+                                    </label>
+                                </div>
+                                <div class="prod-price-mo">
+                                    <b>할인혜택가</b>
+                                    <strong class='price'>519,000</strong>원
+                                </div>
+                            </li>
+                            <li class='swiper-slide'>
+                                <div class="prod-img">
+                                    <img src="../imgs/sub/novita/event-prod02.jpg" alt="흰색배경에 변기와 비대 사이에서 파란색 살균등이 나오는 노비타 비데">
+                                </div>
+                                <div class="prod-desc">
+                                    <div class="prod-name">
+                                        <strong>살균비데 일반형</strong>
+                                        <span aria-label='살균비데 일반형 제품번호'>BD-H510E0</span>
+                                    </div>
+                                    <div class="prod-info">
+                                        <span>노즐 내부, 외부부터 도기까지 따로 신경쓰지 않아도 하루 한 번 자동으로 살균!</span>
+                                        <div class="prod-price">
+                                            <b>할인혜택가</b>
+                                            <strong class='price'>315,000</strong>원
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="prod-util">
+                                    <input type="checkbox" id='like6'>
+                                    <label for="like6">
+                                        <span class='ir-wa'>찜하기</span>
+                                    </label>
+                                    <input type="checkbox" id='cart6'>
+                                    <label for="cart6">
+                                        <span class="ir-wa">장바구니</span>
+                                    </label>
+                                </div>
+                                <div class="prod-price-mo">
+                                    <b>할인혜택가</b>
+                                    <strong class='price'>315,000</strong>원
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="swiper-control">
+                            <div class="swiper-pagination fraction-pagination">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="event-notice">
+            <div class="event-bg" data-aos="fade-left" data-aos-duration="1000"></div>
+            <div class="inner">
+                <div class="title" data-aos="fade-up"data-aos-duration="500" data-aos-delay='1000'>
+                    <h2>노비타 이벤트 소식</h2>
+                    <hr>
+                    <p>
+                        오직 노비타 공식 홈페이지에만 있는 다양한 이벤트를 만나보세요.
+                    </p>
+                </div>
+                <ul class="event-cont" data-aos="fade-up"data-aos-duration="500" data-aos-delay='1000'>
+                    <li class='event-cont-promo cont-L'>
+                        <span class='caption'>노비타 이벤트</span>
+                        <div class="event-slide swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="#none" aria-label='노비타 이벤트 노비타 전국 대리점 단독 보상판매 프로모션'>
+                                        <div class="img">
+                                            <img src="../imgs/sub/novita/event-slide1.png" alt="새 비데로 바꿀 수 있는 올해 마지막 기회 노비타 전국 대리점 단독 보상판매 프로모션 2023년 11월1일 (수)~ 12월31일 (일)까지">
+                                        </div>
+                                        <div class="desc">
+                                            <h3>노비타 전국 대리점 단독 보상판매 프로모션</h3>
+                                            <b>새 비데로 바꿀 수 있는 올해 마지막 기회!</b>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#none" aria-label='노비타 이벤트 노비타 전국 대리점 단독 보상판매 프로모션'>
+                                        <div class="img">
+                                            <img src="../imgs/sub/novita/event-slide2.png" alt="노비타 인기 비데 연말 특가 세일 2023년11월 20일 부터 12월 31일까지">
+                                        </div>
+                                        <div class="desc">
+                                            <h3>노비타 인기 비데 연말 특가 세일</h3>
+                                            <b>올해 마지막 기회!</b>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-control">
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
+                            <div class="event-prod-pagination">
+                                <div class="swiper-pagination fraction-pagination">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class='live cont-s'>
+                        <div class="item-wrap">
+                            <span class='caption'>노비타Live</span>
+                            <div class="event-desc">
+                                <a href="#none" class='event-desc-link' aria-label='노비타 라이브 커머스 확인 바로가기'>
+                                    <div class="img">
+                                        <img src="../imgs/sub/novita/event-noti1.jpg" alt="핸드폰 속 노비타 로고와 비데 이미지">
+                                    </div>
+                                    <div class="event-info">
+                                        <h3>딱 한시간! 노비타 비데의 특별한 혜택을 만날 시간</h3>
+                                        <b>라이브 커머스 단독 특가 찬스!!</b>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class='new-prod cont-s'>
+                        <span class='caption'>노비타 신제품</span>
+                        <div class="event-desc">
+                            <a href="#none" class='event-desc-link' aria-label='슈매니저 (NSM-R5A0G) 확인 바로가기'>
+                                <div class="img">
+                                    <img src="../imgs/sub/novita/event-noti2.png" alt="파란색 배경의 흰색 슈매니저 제품의 모습 ">
+                                </div>
+                                <div class="event-info">
+                                    <h3>슈매니저 (NSM-R5A0G)</h3>
+                                    <b>최근에 출시된 신제품을 확인해 보세요.</b>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class='prod-regist cont-s'>
+                        <span class='caption'>노비타 제품등록</span>
+                        <div class="event-desc">
+                            <a href="#none" class='event-desc-link' aria-label='제품 등록 및 혜택 확인 바로가기'>
+                                <div class="img">
+                                    <img src="../imgs/sub/novita/event-noti3.jpg" alt="핸드폰을 들고 있는 손과 핸드폰 속 제품등록이 완료되었습니다는 문구와 밑에 쿠폰번호가 있는 이미지">
+                                </div>
+                                <div class="event-info">
+                                    <h3>제품을 등록하고 다양한 혜택을 만나보세요</h3>
+                                    <b>닥터클린 서비스 할인 쿠폰을 드립니다.</b>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class='qna cont-s'>
+                        <span class='caption'>1:1문의</span>
+                        <div class="event-desc">
+                            <a href="#none" class='event-desc-link'
+                            aria-label='노비타 QNA바로가기'>
+                                <div class="img">
+                                    <img src="../imgs/sub/novita/event-noti4.jpg" alt="핸드폰 속 노비타 모바일사이트의 모습 로고와 노비타비데 이미지">
+                                </div>
+                                <div class="event-info">
+                                    <h3>노비타에 관한 궁금증이 있다면 무엇이든 물어보세요</h3>
+                                    <b>빠르고 친절하게 답변 드리겠습니다!</b>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="review">
+            <h2 data-aos="fade-up"data-aos-duration="500">사용후기</h2>
+            <div class="swiper review-slide" data-aos="fade-up"data-aos-duration="500">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <div class="review-img">
+                            <img src="../imgs/sub/novita/review-01.png" alt="흰색 살균비데 리모컨형 모델">
+                        </div>
+                        <p class="review-txt">
+                            배송빠르고 간단하게 직접 설치할 수 있었습니다. 작동도 잘되는거 확인했어요~ 방수에 살균 기능까지 있어 더 좋아요~ 믿고 쓰는 노비타 비데~~! [출처: 네이버] 
+                        </p>
+                        <div class="review-link">
+                            <a href="#none">
+                                <img src="../imgs/sub/novita/review-img.jpeg" alt="정사각형의 회색배경에 흰색 비데사진으로 만든 아이콘">
+                                <div class="desc">
+                                    <strong>살균비데 리모컨형</strong>
+                                    <span aria-label='살균비데 리모컨형 제품넘버'>BD-H710H0</span>
+                                </div>
+                                <button class='go-to-detail'><span class='hidden'>상품 상세 정보로 이동</span></button>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="review-img">
+                            <img src="../imgs/sub/novita/review-02.png" alt="흰색 살균비데 리모컨형 모델">
+                        </div>
+                        <p class="review-txt">
+                            10~20만원대 비데도 많았지만 편의성과 특히 3단으로 살균되어 언제나 새것처럼 쓸 수 있는 위생적인 기능이 가장 마음에 들었습니다. 비데는 한번 사면 관리만 잘해준다면 꽤 오래 쓸 수 있는 제품이니 약간 더 투자하는 것도 나쁘지 않은 선택이 될 듯 합니다. [출처: 인터파크]
+                        </p>
+                        <div class="review-link">
+                            <a href="#none">
+                                <img src="../imgs/sub/novita/review-img.jpeg" alt="정사각형의 회색배경에 흰색 비데사진으로 만든 아이콘">
+                                <div class="desc">
+                                    <strong>살균비데 일반형</strong>
+                                    <span aria-label='살균비데 일반형 제품넘버'>BD-H510H0</span>
+                                </div>
+                                <button class='go-to-detail'><span class='hidden'>상품 상세 정보로 이동</span></button>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="review-img">
+                            <img src="../imgs/sub/novita/review-01.png" alt="흰색 살균비데 리모컨형 모델">
+                        </div>
+                        <p class="review-txt">
+                            렌탈만하다가 드디어 노비타를 경험하네요. 일부러 살균기능있는제품을 선택했어요. 금액대가 좀 있긴하지만 더 깔끔해지는것 같아 안심이 되네요.
+                        </p>
+                        <div class="review-link">
+                            <a href="#none">
+                                <img src="../imgs/sub/novita/review-img.jpeg" alt="정사각형의 회색배경에 흰색 비데사진으로 만든 아이콘">
+                                <div class="desc">
+                                    <strong>살균비데 리모컨형</strong>
+                                    <span aria-label='살균비데 리모컨형 제품넘버'>BD-H710H0</span>
+                                </div>
+                                <button class='go-to-detail'><span class='hidden'>상품 상세 정보로 이동</span></button>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="swiper-control">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </section>
+        <section class="service">
+            <div class="inner">
+                <div class="title" data-aos="fade-up"data-aos-duration="500">
+                    <h2>NOVITA SERVICE</h2>
+                    <hr>
+                    <p>
+                        전문가의 관리로 더 깨끗하고 믿을 수 있도록,<br>
+                        인전하고 편리하게 이용할 수 있도록 노비타가 도와드립니다.
+                    </p>
+                </div>
+                <div class="service-cont" data-aos="fade-up"data-aos-duration="500">
+                    <div class="item">
+                        <div class="img left">
+                            <img src="../imgs/sub/novita/service-img-01.png" alt="닥터클린 서비스">
+                        </div>
+                        <div class="desc">
+                            <h3>비데 종합 전문 관리 서비스</h3>
+                            <p>
+                                Dr. Celan 서비스는 서비스 전문 기술자가 직접 제품을 유지보수 해주는 종합관리 서비스 입니다.
+                            </p>
+                            <a href="#none" class='service-link'>Dr.Clean 서비스 바로가기</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="img right">
+                            <img src="../imgs/sub/novita/service-img-02.png" alt="배달 서비스">
+                        </div>
+                        <div class="desc">
+                            <h3>비데 종합 전문 관리 서비스</h3>
+                            <p>
+                                Dr. Celan 서비스는 서비스 전문 기술자가 직접 제품을 유지보수 해주는 종합관리 서비스 입니다.
+                            </p>
+                            <a href="#none" class='service-link'>Dr.Clean 서비스 바로가기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="info">
+            <div class="info-innovation"
+            data-aos="fade-up"data-aos-duration="500">
+                <video src="../imgs/sub/novita/video/INNOVATION_main.mp4" autoplay muted loop playsinline class='innovation_pc'></video>
+                <video src="../imgs/sub/novita/video/innovation_mo.mp4" autoplay  muted loop playsinline class='innovation_mo'></video>
+                <div class="cont">
+                    <h3>THINK BETTER</h3>
+                    <p>
+                        노비타는 우리의 일상 곳곳에 더 나은 가치를 더해<br>
+                        고객의 만족도 높은 생활을 만들어 갑니다.
+                    </p>
+                    <a href="#none" class='inno-link'>
+                        <span>NOVITA INNOVATION</span></a>
+                </div>
+            </div>
+            <div class="info-link">
+                <div class="inner">
+                    <ul class="links" data-aos="fade-up" data-aos-duration="500">
+                        <li>
+                            <a href="#none" class='links-link'>
+                                <div class="links-desc">
+                                    <b>FAQ</b>
+                                    <span>
+                                        자주 묻는 질문에서
+                                        궁금하신 사항을 확인하세요
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class='links-link'>
+                                <div class="links-desc">
+                                    <b>1:1 문의</b>
+                                    <span>
+                                        도움이 필요하시면 언제든지 물어보세요.
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class='links-link'>
+                                <div class="links-desc">
+                                    <b>AS신청</b>
+                                    <span>
+                                        제품에 문제가 생기셨나요? AS를 신청해주세요.
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none" class='links-link'>
+                                <div class="links-desc">
+                                    <b>제품등록</b>
+                                    <span>
+                                        구매하신 제품을 등록하시면 다양한 혜택을 드립니다.
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="inner">
+                <div class="f-logo">
+                    <a href="#none"></a>
+                </div>
+                <div class="f-cont">
+                    <div class="f-info">
+                        <div class="links">
+                            <a href="#none">개인정보처리지침</a>
+                            <a href="#none">이용약관</a>
+                            <a href="#none">쿠키 설정</a>
+                            <a href="#none">개인정보정책</a>
+                        </div>
+                        <ul class='address-info'>
+                            <li>
+                                <span>대표자:카밍래리위엔</span>
+                                <span>충청남도 천안시 서북구 직산읍 부송 3길 61</span>
+                            </li>
+                            <li>
+                                <span>호스팅서비스 사업자 : MS Aure</span>
+                                <span>사업자등록번호: 312-81-13538</span>
+                                <span>통신판매업신고 : 2006-00144</span>
+                                <a href="#none">사업자 정보 확인</a>
+                            </li>
+                            <li>
+                                <span>Copyright @ KOHLER NOVITA. All Rights Reserved.</span>
+                            </li>
+                        </ul>
+                        <ul class="sns">
+                            <li><a href="#none"></a></li>
+                            <li><a href="#none"></a></li>
+                            <li><a href="#none"></a></li>
+                            <li><a href="#none"></a></li>
+                            <li><img src="../imgs/sub/novita/ico-prize-and.png" alt="어워드"></li>
+                        </ul>
+                    </div>
+                    <div class="f-company">
+                        <div class="company-info">
+                            <em>COMPANY</em>
+                            <a href="#none">회사소개</a>
+                            <a href="#none">재무 정보</a>
+                        </div>
+                        <div class="call">
+                            <div class="call-center">
+                                <em>고객상담센터</em>
+                                <span class='num'>1588-6560</span>
+                                <span class='time'>AM 09:00 - PM 18:00</span>
+                            </div>
+                            <div class="call-buying">
+                                <em>구매 문의</em>
+                                <span class='num'>1566-9090</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
