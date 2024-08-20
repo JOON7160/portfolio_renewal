@@ -981,16 +981,17 @@ main {
   margin: 0;
 }
 
-.info__list b {
+.info__list li {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 5px 0;
+}
+.info__list li b {
   display: inline-block;
   width: 60px;
   font-size: 16px;
   margin-right: 20px;
-}
-.info__list li {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 5px 0;
+  white-space: nowrap;
 }
 .info__list li:nth-of-type(2) .color {
   display: inline-block;
@@ -1016,6 +1017,11 @@ main {
 }
 .info__list li:nth-of-type(2) .color.mydata:nth-of-type(3) {
   background: #aaa;
+}
+
+.colors {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* info text, link */
