@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;600&display=swap');
-@import './layouts/mydata-responsive';
-@import './components/mydataSwiper';
 
 /* default settings */
 $font-base: 'Noto Sans KR', sans-serif;
@@ -1279,3 +1277,5 @@ footer {
         }
     }
 }
+@import './components/mydataSwiper';
+@import './layouts/mydata-responsive';
