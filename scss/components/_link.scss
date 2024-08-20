@@ -8,10 +8,9 @@
     border-radius: 5px;
     transition: 0.5s;
     margin: 0 10px;
-    &:hover {
-        @include hover;
+    &:hover {    
+        background: $black14;
+        color: $whiteff;
     }
-    &:active {
-        @include active;
-    }
+    &:active {transform: scale(0.9);}
 }
