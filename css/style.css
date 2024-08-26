@@ -50,13 +50,12 @@ html {
 .txtTypingEffect {
   position: relative;
   flex: 1;
-  border: 1px solid #000;
   height: 50vh;
 }
 
 .typing-wrap {
   position: absolute;
-  top: 25%;
+  top: 50%;
   left: 5%;
 }
 .typing-wrap .fixed-txt {
@@ -94,20 +93,38 @@ html {
 }
 
 .mainVideo {
-  flex: 1;
-  border: 1px solid #000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: calc(100% - 10rem);
+}
+
+.video-wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+.video-wrap video {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
 }
 
 main {
-  margin-top: 5%;
+  position: relative;
   width: 100%;
-  height: 100vh;
+  height: 300vh;
 }
 
 .main-wrap {
+  position: relative;
   display: flex;
   justify-content: space-between;
   gap: 5rem;
+  width: 100%;
+  height: 100vh;
 }
 
 .first-box {

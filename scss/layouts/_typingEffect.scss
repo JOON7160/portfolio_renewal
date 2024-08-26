@@ -1,13 +1,12 @@
 .txtTypingEffect {
     position: relative;
     flex: 1;
-    border: 1px solid #000;
     height: 50vh;
 }
 .typing-wrap {
     @include position (
         $p : absolute,
-        $t : 25%,
+        $t : 50%,
         $l : 5%,
     );
     .fixed-txt {

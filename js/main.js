@@ -8,6 +8,7 @@ const speed = 100;
 //현재 지정된 글자
 let i = 0;
 
+
 //delay 기능(마이크로초)
 function delay(ms) {
     return new Promise(res => setTimeout(res,ms))
@@ -36,6 +37,48 @@ const remove = async () => {
 }
 setTimeout(typing, 1500)
 
+//locomotive , GSAP 
+gsap.registerPlugin(ScrollTrigger);
+const wrap = document.querySelector('.wrap');
+const mainPin = document.querySelector('.main');
+const scroller = new LocomotiveScroll({
+    el: wrap,
+    smooth : true
+})
+ScrollTrigger.scrollerProxy(wrap, {
+    scrollTop(value) {
+        return arguments.length ?
+            scroller.scrollTo(value, 0, 0) :
+            scroller.scroll.instance.scroll.y;
+    },
+    getBoundingClientRect() {
+        return {
+            left: 0,
+            top: 0,
+            width: window.innerWidth,
+            height: window.innerHeight
+        };
+    },
+    pinType: wrap.style.transform ? "transform" : "fixed"
+});
+//locomotive Scroll 업데이트
+scroller.on("scroll", ScrollTrigger.update);
+window.addEventListener('load',function(){
+    gsap.to('.mainVideo',{
+        scrollTrigger : {
+            scroller : wrap,
+            trigger: mainPin,
+            pin: '.main-wrap',
+            start : 'top top',
+            end : 'bottom bottom',
+            scrub : 0.3,
+        },
+        width : '100%',
+        ease : 'power2.inOut',
+    })
+})
+ScrollTrigger.addEventListener('refresh', () => scroller.update());
+ScrollTrigger.refresh();
 //digital clock
 let clockHours = document.querySelector('.hours');
 let clockMinutes = document.querySelector('.minutes');
