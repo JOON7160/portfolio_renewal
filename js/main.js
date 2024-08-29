@@ -39,13 +39,16 @@ setTimeout(typing, 1500)
 
 //locomotive , GSAP 
 gsap.registerPlugin(ScrollTrigger);
-const wrap = document.querySelector('.wrap');
-const mainPin = document.querySelector('.main');
-const scroller = new LocomotiveScroll({
-    el: wrap,
-    smooth : true
-})
-ScrollTrigger.scrollerProxy(wrap, {
+ScrollTrigger.matchMedia({
+    "(min-width: 1025px)": function() {
+    const wrap = document.querySelector('.wrap');
+    const mainPin = document.querySelector('.main');
+    const scroller = new LocomotiveScroll({
+        el: wrap,
+        smooth : true,
+        scrollbar: false,
+    })
+    ScrollTrigger.scrollerProxy(wrap, {
     scrollTop(value) {
         return arguments.length ?
             scroller.scrollTo(value, 0, 0) :
@@ -61,24 +64,28 @@ ScrollTrigger.scrollerProxy(wrap, {
     },
     pinType: wrap.style.transform ? "transform" : "fixed"
 });
-//locomotive Scroll 업데이트
-scroller.on("scroll", ScrollTrigger.update);
-window.addEventListener('load',function(){
-    gsap.to('.mainVideo',{
-        scrollTrigger : {
-            scroller : wrap,
-            trigger: mainPin,
-            pin: '.main-wrap',
-            start : 'top top',
-            end : 'bottom bottom',
-            scrub : 0.3,
-        },
-        width : '100%',
-        ease : 'power2.inOut',
+    //locomotive Scroll 업데이트
+    scroller.on("scroll", ScrollTrigger.update);
+    window.addEventListener('load',function(){
+        gsap.to('.mainVideo',{
+            scrollTrigger : {
+                scroller : wrap,
+                trigger: mainPin,
+                pin: '.main-wrap',
+                start : 'top top',
+                end : 'bottom bottom',
+                scrub : 0.3,
+            },
+            width : '100%',
+            ease : 'power2.inOut',
+        })
     })
+    ScrollTrigger.addEventListener('refresh', () => scroller.update());
+    ScrollTrigger.refresh();
+        }
+        
 })
-ScrollTrigger.addEventListener('refresh', () => scroller.update());
-ScrollTrigger.refresh();
+window.addEventListener('resize', ScrollTrigger.update);
 //digital clock
 let clockHours = document.querySelector('.hours');
 let clockMinutes = document.querySelector('.minutes');

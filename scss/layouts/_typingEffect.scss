@@ -2,13 +2,19 @@
     position: relative;
     flex: 1;
     height: 50vh;
+    @include mobile {
+        height: 50vh;
+    }
 }
 .typing-wrap {
     @include position (
         $p : absolute,
-        $t : 50%,
+        $t : 35%,
         $l : 5%,
     );
+    @include mobile {
+        transform: translateY(-50%);
+    }
     .fixed-txt {
         display: flex;
         max-height: 10rem;
@@ -23,6 +29,12 @@
         .blank {
             display: inline-block;
             width: 25px;
+        }
+        @include mobile {
+            font-size: 15rem;
+            .capital {
+                font-size: 20rem;
+            }
         }
     }
     .ani-txt {
@@ -40,6 +52,14 @@
                 content: "|";
                 animation: blink 1.5s step-end infinite;
             }
+        }
+        @include mobile {
+            @include position (
+                $p : absolute,
+                $t : 100px,
+                $l : 0,
+            );
+            font-size: 15rem;
         }
     }
 }

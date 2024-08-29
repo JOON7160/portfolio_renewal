@@ -4,6 +4,9 @@ main {
     position: relative;
     width: 100%;
     height: 300vh;
+    @include mobile {
+        max-height: 700px;
+    }
 }
 .main-wrap {
     position: relative;
@@ -12,4 +15,7 @@ main {
     gap: 5rem;
     width: 100%;
     height: 100vh;
+    @include mobile {
+        display: block;
+    }
 }

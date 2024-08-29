@@ -1,17 +1,21 @@
 html {
     font-size: 10px;
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    @include mobile {
+        font-size: 5px;
+    }
 }
 
 .layout {
     padding: 3rem 5rem;
     @include mobile () {
-        padding: 1rem;
+        padding: 4rem;
     }
 }
 .box {
     border-radius: 20px;
     background-color: $grayee;
 }
+
 
 

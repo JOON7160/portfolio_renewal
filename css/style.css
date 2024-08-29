@@ -13,9 +13,18 @@ button, a {
   all: unset;
 }
 
+.c-scrollbar {
+  display: none !important;
+}
+
 html {
   font-size: 10px;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 5px;
+  }
 }
 
 .layout {
@@ -23,7 +32,7 @@ html {
 }
 @media screen and (max-width: 1024px) {
   .layout {
-    padding: 1rem;
+    padding: 4rem;
   }
 }
 
@@ -52,11 +61,21 @@ html {
   flex: 1;
   height: 50vh;
 }
+@media screen and (max-width: 1024px) {
+  .txtTypingEffect {
+    height: 50vh;
+  }
+}
 
 .typing-wrap {
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 5%;
+}
+@media screen and (max-width: 1024px) {
+  .typing-wrap {
+    transform: translateY(-50%);
+  }
 }
 .typing-wrap .fixed-txt {
   display: flex;
@@ -73,6 +92,14 @@ html {
 .typing-wrap .fixed-txt .blank {
   display: inline-block;
   width: 25px;
+}
+@media screen and (max-width: 1024px) {
+  .typing-wrap .fixed-txt {
+    font-size: 15rem;
+  }
+  .typing-wrap .fixed-txt .capital {
+    font-size: 20rem;
+  }
 }
 .typing-wrap .ani-txt {
   font-size: 10rem;
@@ -91,6 +118,14 @@ html {
   content: "|";
   animation: blink 1.5s step-end infinite;
 }
+@media screen and (max-width: 1024px) {
+  .typing-wrap .ani-txt {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    font-size: 15rem;
+  }
+}
 
 .mainVideo {
   position: absolute;
@@ -98,6 +133,14 @@ html {
   right: 0;
   width: 50%;
   height: calc(100% - 10rem);
+}
+@media screen and (max-width: 1024px) {
+  .mainVideo {
+    position: static;
+    margin-top: 30px;
+    width: 100%;
+    height: 50%;
+  }
 }
 
 .video-wrap {
@@ -117,6 +160,11 @@ main {
   width: 100%;
   height: 300vh;
 }
+@media screen and (max-width: 1024px) {
+  main {
+    max-height: 700px;
+  }
+}
 
 .main-wrap {
   position: relative;
@@ -125,6 +173,11 @@ main {
   gap: 5rem;
   width: 100%;
   height: 100vh;
+}
+@media screen and (max-width: 1024px) {
+  .main-wrap {
+    display: block;
+  }
 }
 
 .first-box {
@@ -948,7 +1001,6 @@ main {
 .portfolio {
   width: 100%;
   height: 100vh;
-  margin-bottom: 5rem;
 }
 
 .slides-content {
