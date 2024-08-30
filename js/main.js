@@ -86,6 +86,7 @@ ScrollTrigger.matchMedia({
         
 })
 window.addEventListener('resize', ScrollTrigger.update);
+
 //digital clock
 let clockHours = document.querySelector('.hours');
 let clockMinutes = document.querySelector('.minutes');

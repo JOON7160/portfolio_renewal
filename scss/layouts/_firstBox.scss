@@ -10,10 +10,6 @@
     &-top {
         display: flex;
         @include flexCenter;
-        @include background (
-            $bi : $mainImage + 'clock_bg.jpg',
-            $bp : left top,
-        );
         @include mobile(){
             display: none;
         }
