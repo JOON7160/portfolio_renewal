@@ -2,6 +2,10 @@
     display: flex;
     flex: 2;
     flex-wrap: wrap;
+    @include mobile {
+        flex: none;
+        height: 300px;
+    }
     &-top01 {
         position: relative;
         overflow: hidden;
@@ -34,9 +38,12 @@
             
         }
         width: calc(70% - 25px);
-        height: calc(50vh - 15px);
+        height: calc(50% - 15px);
         margin-right: 25px;
         margin-bottom: 15px;
+        @include mobile {
+            height: 100%;
+        }
     }
     &-top02 {
         position: relative;
@@ -55,8 +62,11 @@
             opacity: 1;
         }
         width: 30%;
-        height: calc(50vh - 15px);
+        height: calc(50% - 15px);
         margin-bottom: 15px;
+        @include mobile {
+            height: 100%;
+        }
     }
     &-btm {
         overflow: hidden;
@@ -82,7 +92,7 @@
             display: none;
         }
         width: 100%;
-        height: calc(50vh);
+        height: 50%;
         margin-top: 10px;
     }
 }

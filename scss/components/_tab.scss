@@ -5,7 +5,7 @@
     height: 100%;
     &-list {
         display: flex;
-        gap: .5rem;
+        gap: -0.1rem;
         justify-content: center;
         align-items: center;
         @include position (
@@ -94,7 +94,6 @@
     }
     &.active {
         outline: 3px solid $blue9b;
-        transform: scale(1.1);
         transition: all;
     }
 }

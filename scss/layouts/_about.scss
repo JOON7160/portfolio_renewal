@@ -4,13 +4,16 @@
 
 .about {
     width: 100%;
-    height: auto;
+    height: 800px;
+    @include mobile {
+        height: auto;
+    }
 }
 .about-wrap {
     display: flex;
     gap: 2.5rem;
     width: 100%;
-    height: auto;
+    height: 100%;
     @include mobile() {
         flex-flow: column-reverse;
     }

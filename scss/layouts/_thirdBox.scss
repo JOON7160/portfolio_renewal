@@ -1,4 +1,8 @@
 @import '../components/folderTab';
 .third-box {
     flex: 1;
+    @include mobile {
+        flex: none;
+        height: 350px;
+    }
 }
