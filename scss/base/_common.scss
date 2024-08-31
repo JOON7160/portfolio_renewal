@@ -8,6 +8,7 @@ html {
 }
 
 .layout {
+    width: 100%;
     padding: 3rem 5rem;
     @include mobile () {
         padding: 4rem;

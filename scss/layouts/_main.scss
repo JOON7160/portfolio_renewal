@@ -17,5 +17,6 @@ main {
     height: 100vh;
     @include mobile {
         display: block;
+        height: 100%;
     }
 }
