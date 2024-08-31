@@ -9,6 +9,12 @@
 }
 .semiTitle {
     font-size: 3rem;
+    @include mobile {
+        font-size: 7rem;
+    }
+}
+.pofolTitle {
+    font-size: 3rem;
 }
 .txt-box {
     font-size: 3rem;

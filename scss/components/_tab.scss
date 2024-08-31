@@ -5,12 +5,12 @@
     height: 100%;
     &-list {
         display: flex;
-        gap: -0.1rem;
+        // gap: -0.1rem;
         justify-content: center;
         align-items: center;
         @include position (
             $p : absolute,
-            $b : 20px,
+            $b : 2%,
             $l : 50%,
         );
         transform: translateX(-50%);
