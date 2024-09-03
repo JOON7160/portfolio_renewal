@@ -316,6 +316,29 @@ main {
   color: #fff;
   padding: 20px;
 }
+.tab-content .txt-box .txt-desc b {
+  font-size: 2rem;
+}
+.tab-content .txt-box .txt-desc p {
+  margin-top: 20%;
+  font-size: 1.5rem;
+  font-weight: 400;
+  word-break: keep-all;
+  line-height: 2rem;
+}
+@media screen and (max-width: 1024px) {
+  .tab-content .txt-box .txt-desc {
+    width: 60%;
+  }
+  .tab-content .txt-box .txt-desc b {
+    font-size: 5rem;
+  }
+  .tab-content .txt-box .txt-desc p {
+    margin-top: 20px;
+    font-size: 3rem;
+    line-height: 5rem;
+  }
+}
 .tab-content .txt-01 {
   top: -100%;
   transition: all 0.5s;
@@ -639,6 +662,12 @@ main {
   top: 6%;
   left: 4rem;
 }
+@media screen and (max-width: 1024px) {
+  .folderTab .box .semiTitle {
+    top: 8%;
+    font-size: 3rem;
+  }
+}
 .folderTab .box::after {
   content: "";
   position: absolute;
@@ -655,10 +684,11 @@ main {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 .folderTab .box .txt-box {
-  font-size: 2.5rem;
+  font-size: 2rem;
   width: 80%;
   color: #fff;
   line-height: 1.5em;
+  word-break: keep-all;
   position: absolute;
   top: 12rem;
   left: 50%;
@@ -666,6 +696,13 @@ main {
   opacity: 0;
   transition: all 0.5s;
   pointer-events: none;
+}
+@media screen and (max-width: 1024px) {
+  .folderTab .box .txt-box {
+    font-size: 2.5rem;
+    word-break: keep-all;
+    top: 25%;
+  }
 }
 .folderTab:has(.hover1) .txt-01 {
   opacity: 1;

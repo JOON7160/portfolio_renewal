@@ -14,21 +14,31 @@
                 $p : absolute,
                 $t : 6%,
                 $l : 4rem,
-            )
+            );
+            @include mobile {
+                top: 8%;
+                font-size: 3rem;
+            }
         }
         &::after {
             @include bar;
         }
         .txt-box {
-            font-size: 2.5rem;
+            font-size: 2rem;
             width: 80%;
             color: $whiteff;
             line-height: 1.5em;
+            word-break: keep-all;
             @include position (
                 $p : absolute,
                 $t : 12rem,
                 $l : 50%,
             );
+            @include mobile {
+                font-size: 2.5rem;
+                word-break: keep-all;
+                top: 25%;
+            }
             transform: translateX(-50%);
             opacity: 0;
             transition: all 0.5s;

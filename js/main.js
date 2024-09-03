@@ -116,7 +116,7 @@ for (let i = 0; i < tab.length; i++) {
 };
 
 //videoPlay 
-let video = document.querySelector('video');
+let video = document.querySelector('.introVideo');
 let videoBox = document.querySelector('.videoBox');
 videoBox.addEventListener('mouseenter', () => video.play());
 videoBox.addEventListener('mouseleave', () => video.pause());

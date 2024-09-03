@@ -40,6 +40,29 @@
             border-radius: 10px;
             color: $whiteff;
             padding: 20px;
+            .txt-desc {
+                b {font-size: 2rem;}
+                p {
+                    margin-top: 20%;
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    word-break: keep-all;
+                    line-height: 2rem;
+                }
+
+            }
+            @include mobile {
+                .txt-desc {
+                    width: 60%;
+                    b {font-size: 5rem;}
+                    p {
+                        margin-top: 20px;
+                        font-size: 3rem;
+                        line-height: 5rem;
+                    }
+                }
+            }
+            
         };
         @for $j from 1 through 4 {
             .txt-0#{$j} {
