@@ -328,7 +328,7 @@ main {
 }
 @media screen and (max-width: 1024px) {
   .tab-content .txt-box .txt-desc {
-    width: 60%;
+    width: 100%;
   }
   .tab-content .txt-box .txt-desc b {
     font-size: 5rem;
