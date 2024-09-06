@@ -247,7 +247,7 @@ main {
   height: 100%;
   transition: all 0.5s ease;
   opacity: 0;
-  background-image: url("../../imgs/main/about-img.JPG");
+  background-image: url("../../imgs/main/about-img.webp");
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 1;
@@ -359,7 +359,7 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url("../../imgs/main/think-01.jpeg");
+  background-image: url("../../imgs/main/think-01.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -389,7 +389,7 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url("../../imgs/main/think-02.jpeg");
+  background-image: url("../../imgs/main/think-02.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -419,7 +419,7 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url("../../imgs/main/think-03.jpeg");
+  background-image: url("../../imgs/main/think-03.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -449,7 +449,7 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url("../../imgs/main/think-04.jpeg");
+  background-image: url("../../imgs/main/think-04.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -564,7 +564,7 @@ main {
   height: 100%;
   transition: all 0.5s ease;
   opacity: 0;
-  background-image: url("../../imgs/main/info_bg-1.jpg");
+  background-image: url("../../imgs/main/info_bg-1.webp");
   background-position: left center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -616,11 +616,10 @@ main {
   }
 }
 .second-box-btm {
-  overflow: hidden;
-  position: relative;
   width: 100%;
   height: 50%;
-  margin-top: 10px;
+  overflow: hidden;
+  position: relative;
 }
 .second-box-btm .title {
   position: absolute;
@@ -829,7 +828,7 @@ main {
   height: 100%;
   transition: all 0.5s ease;
   opacity: 0;
-  background-image: url("../../imgs/main/skill-01.jpg");
+  background-image: url("../../imgs/main/skill-01.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -842,7 +841,7 @@ main {
   height: 100%;
   transition: all 0.5s ease;
   opacity: 0;
-  background-image: url("../../imgs/main/skill-02.jpg");
+  background-image: url("../../imgs/main/skill-02.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -855,7 +854,7 @@ main {
   height: 100%;
   transition: all 0.5s ease;
   opacity: 0;
-  background-image: url("../../imgs/main/skill-03.jpg");
+  background-image: url("../../imgs/main/skill-03.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -868,7 +867,7 @@ main {
   height: 100%;
   transition: all 0.5s ease;
   opacity: 0;
-  background-image: url("../../imgs/main/skill-04.jpg");
+  background-image: url("../../imgs/main/skill-04.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }

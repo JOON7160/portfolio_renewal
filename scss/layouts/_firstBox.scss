@@ -32,7 +32,7 @@
             z-index: 100;
             @include bgCover {
                 @include background (
-                    $bi : $mainImage + 'about-img.JPG',
+                    $bi : $mainImage + 'about-img.webp',
                 );
                 opacity: 1;
                 transition: all 1s;

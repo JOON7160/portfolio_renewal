@@ -158,7 +158,7 @@
     .bgImage-0#{$s} {
         @include bgCover;
         @include background (
-            $bi : $mainImage + 'skill-0' +#{$s} + '.jpg',
+            $bi : $mainImage + 'skill-0' +#{$s} + '.webp',
         );
     }
 }
